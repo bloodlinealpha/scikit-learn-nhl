@@ -60,7 +60,7 @@ app.layout = html.Div([
                  "Predicted Points" uses the various models (Regression, Random Forest, Gradient Boost) to predict and match player points to the "Actual".\
                   The Extrapolated values estimate each players season totals assuming an 82 game season. This is done using the Actual, as well as the 3 models. \
                   Click on the lines to see the Points for each model.\
-                  Click on the legend to hide/show the lines.', style={'fontSize': '0.85rem', 'fontFamily': 'Arial', 'fontStyle': 'italic' ,'textAlign': 'left', 'padding': '1rem'}),
+                  Click on the legend to hide/show the lines.', style={'fontSize': '0.85rem', 'fontStyle': 'italic' ,'textAlign': 'left', 'padding': '1rem'}),
         html.Button('Reset Legend', id='reset-button', style={
                                                                 'height': '2rem',
                                                                 'backgroundColor': '#007BFF',  # Blue color
@@ -71,7 +71,6 @@ app.layout = html.Div([
                                                                 'marginRight': '1rem', 
                                                                 'marginTop': '1rem', 
                                                                 'marginBottom': '1rem', 
-                                                                'fontFamily': 'Arial', 
                                                                 'transition': 'backgroundColor 0.3s ease',  # Smooth color transition
                                                                 'cursor': 'pointer',  # Change cursor on hover
                                                                 'outline': 'none',  # Remove outline
@@ -82,22 +81,38 @@ app.layout = html.Div([
         dcc.Graph(id='player-graph' , style={'height': '65vh',})
     ], style={'width': '100%'}),
     html.Div([
-        html.Div('Player Stats (as of Jan 6, 2023)', style={'fontSize': '1.25rem', 'fontFamily': 'Arial', 'textAlign': 'center', 'marginBottom': '1rem'}),
+        html.Div('Player Stats (as of Jan 6, 2023)', style={'fontSize': '1.25rem', 'textAlign': 'center', 'marginBottom': '1rem'}),
         dash_table.DataTable(
             id='player-table',
             style_cell={'whiteSpace': 'normal', 'height': 'auto'},
             style_cell_conditional = style_cell_conditional
             
         ),
-        html.Div('Extrapolated Player Stats (End of 2023/2024 season)', style={'fontSize': '1.25rem', 'fontFamily': 'Arial', 'textAlign': 'center', 'marginBottom': '1rem', 'marginTop': '1rem'}),
+        html.Div('Extrapolated Player Stats (End of 2023/2024 season)', style={'fontSize': '1.25rem',  'textAlign': 'center', 'marginBottom': '1rem', 'marginTop': '1rem'}),
         dash_table.DataTable(
             id='player-table_extrapolated',
             style_cell={'whiteSpace': 'normal', 'height': 'auto'},
             style_cell_conditional= style_cell_conditional
         )
     ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'justifyContent': 'space-evenly', 'marginTop': '1rem', 'marginBottom': '1rem'}),
+    html.Footer([
+        html.Div('Created by: BloodLineAlpha Development', style={'fontSize': '0.75rem', 'textAlign': 'center', 'marginTop': '1rem', 'marginBottom': '1rem'}),
+        html.Div([
+            dcc.Link(
+                'Data Source: https://github.com/bloodlinealpha/scikit-learn-nhl',
+                href='https://github.com/bloodlinealpha/scikit-learn-nhl',
+            ),
+        ], style={'fontSize': '0.75rem', 'textAlign': 'center', 'marginTop': '1rem', 'marginBottom': '1rem'}),
+        html.Div([
+            dcc.Link(
+                'Contact',
+                href='mailto:bloodlinealpha@gmail.com',
+            )
+        ], style={'fontSize': '0.75rem', 'textAlign': 'center', 'marginTop': '1rem', 'marginBottom': '1rem'}),
+
+    ], style={'fontSize': '0.75rem', 'textAlign': 'center', 'marginTop': '1rem', 'marginBottom': '1rem'})
     
-], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'justifyContent': 'flex-start'})
+], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'justifyContent': 'flex-start', 'fontFamily': 'Arial'})
 
 @app.callback(
     Output('player-graph', 'figure'),
@@ -146,7 +161,7 @@ def create_fig_for_player(selected_dropdown_value):
     fig.add_annotation(
         x=dff['Games Played'].values[0],
         y=dff['Actual Points'].values[0],
-        text=str(int(dff['Actual Points'].values[0])) + " points",
+        text=str(round(dff['Actual Points'].values[0], 0)) + " points",
         clicktoshow='onoff',
         visible=False,
         align="center",
@@ -170,7 +185,7 @@ def create_fig_for_player(selected_dropdown_value):
     fig.add_annotation(
         x=dff['Games Played'].values[0],
         y=dff['Predicted Points (LR)'].values[0],
-        text=str(int(dff['Predicted Points (LR)'].values[0])) + " points",
+        text=str(round(dff['Predicted Points (LR)'].values[0], 0)) + " points",
         clicktoshow='onoff',
         visible=False,
         align="center",
@@ -194,7 +209,7 @@ def create_fig_for_player(selected_dropdown_value):
     fig.add_annotation(
         x=dff['Games Played'].values[0],
         y=dff['Predicted Points (RF)'].values[0],
-        text=str(int(dff['Predicted Points (RF)'].values[0])) + " points",
+        text=str(round(dff['Predicted Points (RF)'].values[0],0)) + " points",
         clicktoshow='onoff',
         visible=False,
         align="center",
@@ -218,7 +233,7 @@ def create_fig_for_player(selected_dropdown_value):
     fig.add_annotation(
         x=dff['Games Played'].values[0],
         y=dff['Predicted Points (GB)'].values[0],
-        text=str(int(dff['Predicted Points (GB)'].values[0])) + " points",
+        text=str(round(dff['Predicted Points (GB)'].values[0],0)) + " points",
         clicktoshow='onoff',
         visible=False,
         align="center",
@@ -243,7 +258,7 @@ def create_fig_for_player(selected_dropdown_value):
     fig.add_annotation(
         x=dff2['Games Played'].values[0], 
         y=dff2['Actual Points'].values[0], 
-        text=str(int(dff2['Actual Points'].values[0])) + " points", 
+        text=str(round(dff2['Actual Points'].values[0], 0)) + " points", 
         clicktoshow='onoff', 
         visible=False,
         align="center",
@@ -267,7 +282,7 @@ def create_fig_for_player(selected_dropdown_value):
     fig.add_annotation(
         x=dff2['Games Played'].values[0], 
         y=dff2['Predicted Points (LR)'].values[0], 
-        text=str(int(dff2['Predicted Points (LR)'].values[0])) + " points", 
+        text=str(round(dff2['Predicted Points (LR)'].values[0], 0)) + " points", 
         clicktoshow='onoff', 
         visible=False,
         align="center",
@@ -291,7 +306,7 @@ def create_fig_for_player(selected_dropdown_value):
     fig.add_annotation(
         x=dff2['Games Played'].values[0], 
         y=dff2['Predicted Points (RF)'].values[0],
-            text=str(int(dff2['Predicted Points (RF)'].values[0])) + " points", 
+            text=str(round(dff2['Predicted Points (RF)'].values[0], 0)) + " points", 
             clicktoshow='onoff', 
             visible=False,
             align="center",
@@ -315,7 +330,7 @@ def create_fig_for_player(selected_dropdown_value):
     fig.add_annotation(
         x=dff2['Games Played'].values[0], 
         y=dff2['Predicted Points (GB)'].values[0], 
-        text=str(int(dff2['Predicted Points (GB)'].values[0])) + " points", 
+        text=str(round(dff2['Predicted Points (GB)'].values[0], 0)) + " points", 
         clicktoshow='onoff', 
         visible=False,
         align="center",
