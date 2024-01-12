@@ -1,10 +1,43 @@
-# Scikit Learn - Top 100 NHL Players 2023/24 Season
+# Points Regression - Top 100 NHL Players 2023/24 Season
 
-This example highlights the a simple example using the NHL API, [Scikit-Learn](https://scikit-learn.org/stable/), and Python. Using the top 100 NHL players by points (as of Jan 6, 2023) and Scikit-Learn I created 3 regression model (Linear, Random Forest, and Gradient Boost) to predict player point totals. 
+This example highlights the a simple example using the NHL API, [Scikit-Learn](https://scikit-learn.org/stable/), and Python. Using the top 100 NHL players by points (as of Jan 6, 2023) and Scikit-Learn I created 3 regression models (Linear, Random Forest, and Gradient Boost) to predict player point totals. 
 
-The models are trained on data from the past 5 seasons (not including the current season = 2023/2024). This allows us to test the models using current players current stats (as of Jan 6, 2023), which we can also extrapolate to 82 games, so we can predict end of the season point totals.
+The models are trained on data from the past 5 seasons (not including the current season = 2023/2024). This allows us to:
+- test the models using the current season stats (as of Jan 6, 2023)
+- extrapolate current season stats to 82 games and predict end of the season point totals
 
 To visualize the data I created a graph and datatable using [Plotly](https://dash.plotly.com/).
+## Visualizer
+
+### Live Example
+See it live and try the interactive visualizer at: [https://bloodlinealpha.com/nhl/points-prediction/](https://bloodlinealpha.com/nhl/points-prediction/)
+
+### Run Locally
+1.) Create and Activate the Virtual Environment
+- Open a terminal and navigate to the points directory:
+    ```shell
+    cd .\examples\points\
+- Create the virtual environment
+    ```shell
+    python3 -m venv env
+- Activate the virtual environment
+    ```shell
+    cd .\env\Scripts\activate
+- You should see a (env) in yout terminal
+
+2.) Install the Packages 
+- Move back to the root directory
+    ```shell
+        cd ..
+        cd ..
+- Install the pip packages from the requirements.txt
+    ```shell
+    pip install -r requirements.txt
+3.) Run the visualizer
+- Ensure you are in the [points](examples\points) folder
+    ```shell
+    python visualizer.py
+- Open your browser and navigate to: [http://127.0.0.1:8050/](http://127.0.0.1:8050/)
 
 
 ## Steps Taken
@@ -19,7 +52,7 @@ To visualize the data I created a graph and datatable using [Plotly](https://das
 
 3.) Created and ran [model.py](examples\points\model.py), which:
 - Takes in the Top-100-NHL-5-year-Stats.csv
-- Drops columns that are not needed and cause cause leakage
+- Drops columns that are not needed and cause data leakage
 - One-hot encodes the positionCode
 - Normalizes the data based on max and min values
 - Splits the data into train and test sets
