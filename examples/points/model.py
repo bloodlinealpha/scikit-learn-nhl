@@ -29,21 +29,26 @@ def create_points_model():
     #one-hot encode positionCode
     stats_5_year_df_1 = pd.get_dummies(stats_5_year_df_1, columns=['positionCode'])
 
-    # Calculate min and max for each column
-    min_values = stats_5_year_df_1.min()
-    max_values = stats_5_year_df_1.max()
-
-    # Get a list of all columns that were created by one-hot encoding
-    encoded_cols = [col for col in stats_5_year_df_1.columns if 'positionCode_' in col]
-    # Normalize data using min_values and max_values
-    stats_5_year_df_1 = stats_5_year_df_1.apply(lambda x: x if x.name in encoded_cols else (x - min_values[x.name]) / (max_values[x.name] - min_values[x.name]))
-
     # set features and target
     features = stats_5_year_df_1.drop(['points'], axis=1)
     target = stats_5_year_df_1['points']
 
     # split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
+
+    # Get a list of all columns that were created by one-hot encoding
+    encoded_cols = [col for col in X_train.columns if 'positionCode_' in col]
+
+    # Calculate min and max values from the training set
+    min_values = X_train.min()
+    max_values = X_train.max()
+
+    # Normalize the test and training data independently to prevent data leakage and overfitting
+    # Normalize training data using min_values and max_values
+    X_train = X_train.apply(lambda x: x if x.name in encoded_cols else (x - min_values[x.name]) / (max_values[x.name] - min_values[x.name]))
+
+    # Normalize testing data using min_values and max_values
+    X_test = X_test.apply(lambda x: x if x.name in encoded_cols else (x - min_values[x.name]) / (max_values[x.name] - min_values[x.name]))
 
     # create a linear regression model
     linear_model = LinearRegression()

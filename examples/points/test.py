@@ -49,17 +49,21 @@ def points_current_test(drop_columns_1, linear_model, random_forest_model, gradi
         if extrapolate:
             # find the columns that are not in the extrapolate_ignore_cols list
             extrapolate_cols = [col for col in player_stats.columns if col not in extrapolate_ignore_cols]
+            
             # extrapolate the columns assuming the player plays 82 games
             player_stats[extrapolate_cols] = player_stats[extrapolate_cols].apply(lambda x: (x / x['gamesPlayed']) * (82), axis=1)
 
 
         # create a copy of the player stats to save to the player_stats_list
         player_stats_copy = player_stats.copy()
+
         # add the player name to the start of player_stats_copy and remove the first column
         player_stats_copy.insert(0, 'skaterFullName', player_name)
         player_stats_copy = player_stats_copy.drop(player_stats_copy.columns[1], axis=1)
+
         # remove encoded columns
         player_stats_copy = player_stats_copy.drop(encoded_cols, axis=1)
+
         # save the player stats before normalization
         player_stats_list.append(player_stats_copy)
             
@@ -75,11 +79,6 @@ def points_current_test(drop_columns_1, linear_model, random_forest_model, gradi
         predicted_points_lr = linear_model.predict(player_stats)
         predicted_points_rf = random_forest_model.predict(player_stats)
         predicted_points_gb = gradient_boost_model.predict(player_stats)
-
-        # Denormalize predictions
-        predicted_points_lr = (predicted_points_lr * (max_values['points'] - min_values['points'])) + min_values['points']
-        predicted_points_rf = (predicted_points_rf * (max_values['points'] - min_values['points'])) + min_values['points']
-        predicted_points_gb = (predicted_points_gb * (max_values['points'] - min_values['points'])) + min_values['points']
 
         # append the results to the list
         results.append([player_name, predicted_points_lr[0], predicted_points_rf[0], predicted_points_gb[0], points, games_played])
@@ -98,9 +97,9 @@ def points_current_test(drop_columns_1, linear_model, random_forest_model, gradi
     player_stats_df = pd.concat(player_stats_list)
     # save the player stats to a excel file
     if extrapolate:
-        player_stats_df.to_excel("output/test-1.xlsx")
+        player_stats_df.to_excel("output/player_stats_extrapolated.xlsx")
     else:
-        player_stats_df.to_excel("output/test-2.xlsx")
+        player_stats_df.to_excel("output/player_stats.xlsx")
 
     return results_df
 
@@ -118,8 +117,8 @@ def run_tests():
     print('*******************************************************************************************************')
 
     # export the results to an excel file
-    results_df_current.to_excel("output/test-3.xlsx")
-    results_df_extrapolated.to_excel("output/test-4.xlsx")
+    results_df_current.to_excel("output/results_current.xlsx")
+    results_df_extrapolated.to_excel("output/results_extrapolated.xlsx")
 
     return results_df_current, results_df_extrapolated
 
