@@ -1,0 +1,37 @@
+html, body{
+    width: 100vw;
+}
+.select-cont{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    width: 50%; 
+    height: 10%; 
+    margin-bottom: 1rem; 
+    margin-top: 1rem
+}
+#player-graph{
+    height: 65vh;
+}
+
+@media screen and (max-width: 600px) {
+    .select-cont{
+        width: 100%; 
+    }
+    #player-graph{
+        width: 100vw;
+        height: 125vh;
+    }
+    
+}
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    .select-cont{
+        width: 100%; 
+    }
+    #player-graph{
+        width: 100vw;
+        height: 125vh;
+    }
+    
+}

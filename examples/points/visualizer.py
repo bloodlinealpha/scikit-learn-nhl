@@ -6,17 +6,31 @@ import plotly.graph_objects as go
 import pandas as pd
 
 # load the results.csv
-df = pd.read_excel("examples/points/output/results_current.xlsx")
+df = pd.read_excel("output/results_current.xlsx")
 
 # load the results_extrapolated.csv
-df2 = pd.read_excel("examples/points/output/results_extrapolated.xlsx")
+df2 = pd.read_excel("output/results_extrapolated.xlsx")
 
 # load the player_stats.xlsx
-df_table = pd.read_excel("examples/points/output/player_stats.xlsx")
+df_table = pd.read_excel("output/player_stats.xlsx")
+
+# remove all columns but skater name
+df_table = df_table[['skaterFullName']]
 
 # load the player_stats_extrapolated.xlsx
-df2_table = pd.read_excel("examples/points/output/player_stats_extrapolated.xlsx")
+df2_table = pd.read_excel("output/player_stats_extrapolated.xlsx")
 
+# remove all columns but skater name
+df2_table = df2_table[['skaterFullName']]
+
+
+# init dash app
+app = dash.Dash(meta_tags=[{"name": "viewport", "content": "width=device-width", "initial-scale": "1"}])
+# needed for hosting
+# app = dash.Dash(requests_pathname_prefix='/nhl/points-prediction/')
+server = app.server
+
+# set table styles
 style_cell_conditional=[
     {
         'if': {'column_id': 'Predicted Points (LR)'},
@@ -40,9 +54,8 @@ style_cell_conditional=[
     }
 ]
 
-app = dash.Dash(__name__)
-
 app.layout = html.Div([
+    html.Div('NHL Top 100 Players (2023/2024) Points Prediction', style={'fontSize': '1.5rem','fontWeight': 'bold', 'textAlign': 'center', 'marginBottom': '1rem'}),
     html.Div([
         html.Div('Select a player', style={'fontSize': '1rem','marginRight': '1rem'}),
         html.Div(
@@ -54,13 +67,13 @@ app.layout = html.Div([
                 ),
                 style={'width': '50%', 'height': '2rem', 'marginRight': '1rem'}
             ),
-    ], style={'display': 'flex', 'flexDirection': 'row', 'alignItems': 'center', 'justifyContent': 'center','width': '50%', 'height': '10%', 'marginBottom': '1rem', 'marginTop': '1rem'}),
+    ], className='select-cont'),
     html.Div([
         html.Div('Notes: "Actual" is the total points for the current season (as of Jan 6, 2024).\
                  "Predicted Points" uses the various models (Regression, Random Forest, Gradient Boost) to predict and match player points to the "Actual".\
                   The Extrapolated values estimate each players season totals assuming an 82 game season. This is done using the Actual, as well as the 3 models. \
                   Click on the lines to see the Points for each model.\
-                  Click on the legend to hide/show the lines.', style={'fontSize': '0.85rem', 'fontStyle': 'italic' ,'textAlign': 'left', 'padding': '1rem'}),
+                  Click on the legend to hide/show the lines. Full source code in the footer.', style={'fontSize': '0.85rem', 'fontStyle': 'italic' ,'textAlign': 'left', 'padding': '1rem'}),
         html.Button('Reset Legend', id='reset-button', style={
                                                                 'height': '2rem',
                                                                 'backgroundColor': '#007BFF',  # Blue color
@@ -78,12 +91,17 @@ app.layout = html.Div([
                                                             }),
     ], style={'textAlign': 'right', 'marginTop': '1rem', 'marginRight': '2rem',}),
     html.Div([
-        dcc.Graph(id='player-graph' , style={'height': '65vh',})
+        dcc.Graph(id='player-graph')
     ], style={'width': '100%'}),
     html.Div([
         html.Div('Player Stats (as of Jan 6, 2023)', style={'fontSize': '1.25rem', 'textAlign': 'center', 'marginBottom': '1rem'}),
         dash_table.DataTable(
             id='player-table',
+            style_table={
+                'whiteSpace': 'normal',
+                'height': 'auto', 
+                'width':'auto'
+            },
             style_cell={'whiteSpace': 'normal', 'height': 'auto'},
             style_cell_conditional = style_cell_conditional
             
@@ -98,16 +116,20 @@ app.layout = html.Div([
     html.Footer([
         html.Div('Created by: BloodLineAlpha Development', style={'fontSize': '0.75rem', 'textAlign': 'center', 'marginTop': '1rem', 'marginBottom': '1rem'}),
         html.Div([
-            dcc.Link(
+            html.A(
                 'Data Source: https://github.com/bloodlinealpha/scikit-learn-nhl',
                 href='https://github.com/bloodlinealpha/scikit-learn-nhl',
-            ),
+                target='_blank'
+            )
         ], style={'fontSize': '0.75rem', 'textAlign': 'center', 'marginTop': '1rem', 'marginBottom': '1rem'}),
         html.Div([
-            dcc.Link(
+            html.A(
                 'Contact',
                 href='mailto:bloodlinealpha@gmail.com',
-            )
+                target='_blank'
+            ),
+            html.Div(' | ', style={'padding': '0 1rem', 'display': 'inline-block'}),
+            html.Div('bloodlinealpha@gmail.com', style={'display': 'inline-block'}),
         ], style={'fontSize': '0.75rem', 'textAlign': 'center', 'marginTop': '1rem', 'marginBottom': '1rem'}),
 
     ], style={'fontSize': '0.75rem', 'textAlign': 'center', 'marginTop': '1rem', 'marginBottom': '1rem'})
@@ -132,11 +154,6 @@ def create_fig_for_player(selected_dropdown_value):
     fig = go.Figure()
 
     fig.update_layout(
-        title_text='NHL Top 100 Players (2023/2024) Points Prediction', 
-        title_x=0.5,
-        title_y=1, 
-        title_font_family='Arial',
-        title_font_size=24,
         legend=dict(
             yanchor="top",
             y=0.99,
@@ -394,8 +411,6 @@ def create_table_for_player(selected_dropdown_value):
     # create a dataframe with the player stats
     dff = df_table[df_table['skaterFullName'] == selected_dropdown_value]
     columns = [{"name": i, "id": i} for i in dff.columns]
-    # drop the first column
-    columns.pop(0)
     data = dff.round(4).to_dict('records')
 
     # add model predictions to the column and value
@@ -419,8 +434,6 @@ def create_table_for_player_extrapolated(selected_dropdown_value):
     # create a dataframe with the player stats
     dff = df2_table[df2_table['skaterFullName'] == selected_dropdown_value]
     columns=[{"name": i, "id": i} for i in dff.columns]
-    # drop the first column
-    columns.pop(0)
     data = dff.round(4).to_dict('records')
 
     # add extrapolated model predictions to the column and value
@@ -437,4 +450,6 @@ def create_table_for_player_extrapolated(selected_dropdown_value):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    # app.run(debug=True)
+    app.run()
+    

@@ -98,9 +98,9 @@ def points_current_test(drop_columns_1, linear_model, random_forest_model, gradi
     player_stats_df = pd.concat(player_stats_list)
     # save the player stats to a excel file
     if extrapolate:
-        player_stats_df.to_excel("examples/points/output/player_stats_extrapolated.xlsx")
+        player_stats_df.to_excel("output/test-1.xlsx")
     else:
-        player_stats_df.to_excel("examples/points/output/player_stats.xlsx")
+        player_stats_df.to_excel("output/test-2.xlsx")
 
     return results_df
 
@@ -118,8 +118,8 @@ def run_tests():
     print('*******************************************************************************************************')
 
     # export the results to an excel file
-    results_df_current.to_excel("examples/points/output/results_current.xlsx")
-    results_df_extrapolated.to_excel("examples/points/output/results_extrapolated.xlsx")
+    results_df_current.to_excel("output/test-3.xlsx")
+    results_df_extrapolated.to_excel("output/test-4.xlsx")
 
     return results_df_current, results_df_extrapolated
 
