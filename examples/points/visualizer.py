@@ -5,6 +5,32 @@ from dash.dependencies import Input, Output
 import plotly.graph_objects as go
 import pandas as pd
 
+# init dash app
+app = dash.Dash(meta_tags=[{"name": "viewport", "content": "width=device-width", "initial-scale": "1"}])
+# needed for hosting
+# app = dash.Dash( 
+#     __name__,
+#     meta_tags=[{"name": "viewport", "content": "width=device-width", "initial-scale": "1"}], 
+#     requests_pathname_prefix='/nhl/points-prediction/',
+#     title="NHL Points Prediction",
+#     update_title="NHL Points Prediction - Loading...",
+#     assets_folder="assets",
+#     include_assets_files=True,
+# )
+
+# set server for hosting
+server = app.server
+
+# need for caching data when hosting
+# Configure no caching
+# @server.after_request
+# def add_header(response):
+#     response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
+#     response.headers['Pragma'] = 'no-cache'
+#     response.headers['Expires'] = '0'
+#     return response
+
+
 # load the results.csv
 df = pd.read_excel("output/results_current.xlsx")
 
@@ -22,13 +48,6 @@ df2_table = pd.read_excel("output/player_stats_extrapolated.xlsx")
 
 # remove all columns but skater name
 df2_table = df2_table[['skaterFullName']]
-
-
-# init dash app
-app = dash.Dash(meta_tags=[{"name": "viewport", "content": "width=device-width", "initial-scale": "1"}])
-# needed for hosting
-# app = dash.Dash(requests_pathname_prefix='/nhl/points-prediction/')
-server = app.server
 
 # set table styles
 style_cell_conditional=[
@@ -57,18 +76,6 @@ style_cell_conditional=[
 app.layout = html.Div([
     html.Div('NHL Top 100 Players (2023/2024) Points Prediction', style={'fontSize': '1.5rem','fontWeight': 'bold', 'textAlign': 'center', 'marginBottom': '1rem'}),
     html.Div([
-        html.Div('Select a player', style={'fontSize': '1rem','marginRight': '1rem'}),
-        html.Div(
-            dcc.Dropdown(
-                id='player-dropdown',
-                options=[{'label': f"{i+1}. {name}", 'value': name} for i, name in enumerate(df['Player Name'].unique())],
-                value=df['Player Name'].unique()[0],
-                placeholder="Select a player",
-                ),
-                style={'width': '50%', 'height': '2rem', 'marginRight': '1rem'}
-            ),
-    ], className='select-cont'),
-    html.Div([
         html.Div('Notes: "Actual" is the total points for the current season (as of Jan 6, 2024).\
                  "Predicted Points" uses the various models (Regression, Random Forest, Gradient Boost) to predict and match player points to the "Actual".\
                   The Extrapolated values estimate each players season totals assuming an 82 game season. This is done using the Actual, as well as the 3 models. \
@@ -93,6 +100,18 @@ app.layout = html.Div([
     html.Div([
         dcc.Graph(id='player-graph')
     ], style={'width': '100%'}),
+    html.Div([
+        html.Div('Select a player', style={'fontSize': '1rem','marginRight': '1rem', 'fontWeight': 'bold'}),
+        html.Div(
+            dcc.Dropdown(
+                id='player-dropdown',
+                options=[{'label': f"{i+1}. {name}", 'value': name} for i, name in enumerate(df['Player Name'].unique())],
+                value=df['Player Name'].unique()[0],
+                placeholder="Select a player",
+                ),
+                style={'width': '50%', 'height': '2rem', 'marginRight': '1rem'}
+            ),
+    ], className='select-cont'),
     html.Div([
         html.Div('Player Stats (as of Jan 6, 2023)', style={'fontSize': '1.25rem', 'textAlign': 'center', 'marginBottom': '1rem'}),
         dash_table.DataTable(
@@ -159,7 +178,14 @@ def create_fig_for_player(selected_dropdown_value):
             y=0.99,
             xanchor="left",
             x=0.01
-        )
+        ),
+        title={
+            'text': "Points Prediction for " + selected_dropdown_value,
+            'y':0.95,
+            'x':0.5,
+            'xanchor': 'center',
+            'yanchor': 'top'
+        },
     )
 
     # Draw solid lines from zero to the actual points
@@ -451,5 +477,5 @@ def create_table_for_player_extrapolated(selected_dropdown_value):
 
 if __name__ == '__main__':
     # app.run(debug=True)
-    app.run()
+    app.run(debug=True)
     
