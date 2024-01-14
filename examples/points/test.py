@@ -1,13 +1,15 @@
 import pandas as pd
-from model import create_points_model
+from joblib import load
+from model import drop_columns
 
 def points_current_test(drop_columns_1, linear_model, random_forest_model, gradient_boost_model, min_values, max_values, extrapolate=False):
-    # test with current season stats for each player
-    #import current season csv
-    current_season_df = pd.read_csv("csv/Top-100-NHL-20232024-Jan-6-2023.csv")
-    #print(current_season_df.head().to_string())
+    """Create predictions for the current season data. Returns a dataframe with the results."""    
 
-    # one-hot encode positionCode
+    # load the current season points csv
+    current_season_df = pd.read_csv("csv/Top-100-NHL-20232024-Jan-6-2023.csv")
+    # print(current_season_df.head().to_string())
+
+    # one-hot encode positionCode for all rows
     current_season_df = pd.get_dummies(current_season_df, columns=['positionCode'])
 
     # create empty list to save results to a csv file
@@ -15,27 +17,32 @@ def points_current_test(drop_columns_1, linear_model, random_forest_model, gradi
 
     # create empty list to save the player stats
     player_stats_list = []
-    # for each row in the current season df, predict the points
+
+    # loop through each row and predict the points for the player
     for index, row in current_season_df.iterrows():
-        # if index != 1:
-        #     continue
         # get the player name
         player_name = row['skaterFullName']
+
         # get points for the player
         points = row['points']
+
         # get games played for the player
         games_played = row['gamesPlayed']
+
+        # extrapolate the points if necessary
         if extrapolate:
-            # extrapolate points
+            # extrapolate the points assuming the player plays 82 games
             points = (points / games_played) * 82
+            # update games played to 82
             games_played = 82
 
         # create a dataframe with the player stats
         player_stats = pd.DataFrame(row).transpose()
         
-        # drop the columns
+        # drop the columns that are not needed as they were not used when training the model
         player_stats = player_stats.drop(drop_columns_1, axis=1)
-        # drop points
+
+        # drop points as it is the target variable
         player_stats = player_stats.drop(['points'], axis=1)
 
         # Get a list of all columns that were created by one-hot encoding
@@ -44,7 +51,7 @@ def points_current_test(drop_columns_1, linear_model, random_forest_model, gradi
         #columns to ignore when extrapolating
         extrapolate_ignore_cols = ['shootingPct', 'timeOnIcePerGame']
 
-        # merge the two lists
+        # merge the two lists so that the encoded columns are not extrapolated either
         extrapolate_ignore_cols.extend(encoded_cols)
         if extrapolate:
             # find the columns that are not in the extrapolate_ignore_cols list
@@ -67,20 +74,15 @@ def points_current_test(drop_columns_1, linear_model, random_forest_model, gradi
         # save the player stats before normalization
         player_stats_list.append(player_stats_copy)
             
-    
         # Normalize data using min_values and max_values
         player_stats = player_stats.apply(lambda x: x if x.name in encoded_cols else (x - min_values[x.name]) / (max_values[x.name] - min_values[x.name]))
-
-        # print the player stats
-        # print(f"Player Stats for {player_name}")
-        # print(player_stats.to_string())
 
         # predict the points
         predicted_points_lr = linear_model.predict(player_stats)
         predicted_points_rf = random_forest_model.predict(player_stats)
         predicted_points_gb = gradient_boost_model.predict(player_stats)
 
-        # append the results to the list
+        # add the prediction results to the results list
         results.append([player_name, predicted_points_lr[0], predicted_points_rf[0], predicted_points_gb[0], points, games_played])
         
         # print the results
@@ -95,6 +97,7 @@ def points_current_test(drop_columns_1, linear_model, random_forest_model, gradi
 
     # create a dataframe with the player stats
     player_stats_df = pd.concat(player_stats_list)
+
     # save the player stats to a excel file
     if extrapolate:
         player_stats_df.to_excel("output/player_stats_extrapolated.xlsx")
@@ -103,9 +106,19 @@ def points_current_test(drop_columns_1, linear_model, random_forest_model, gradi
 
     return results_df
 
-def run_tests():
-    # create the model
-    drop_columns_1, linear_model, random_forest_model, gradient_boost_model, min_values, max_values = create_points_model()
+# test that creates predictions for the current season point totals
+def run_tests_default_models():
+    """Run the tests using the default models for the current season. Loads the models from the joblib files and create predictions for the current season data."""
+
+    # get columns to be dropped
+    drop_columns_1 = drop_columns()
+
+    # load joblib files for model and min/max values
+    linear_model = load('output/joblib/linear_regression_default_model.joblib')
+    random_forest_model = load('output/joblib/random_forest_default_model.joblib')
+    gradient_boost_model = load('output/joblib/gradient_boost_default_model.joblib')
+    min_values = load('output/joblib/min_values.joblib')
+    max_values = load('output/joblib/max_values.joblib')
 
     # run the current season test
     print("Current Season Test")
@@ -120,10 +133,36 @@ def run_tests():
     results_df_current.to_excel("output/results_current.xlsx")
     results_df_extrapolated.to_excel("output/results_extrapolated.xlsx")
 
-    return results_df_current, results_df_extrapolated
+def run_tests_tuned_models():
+    """Run the tests using the tuned models for the current season. Loads the tuned models from the joblib files and create predictions for the current season data."""
+
+    # get columns to be dropped
+    drop_columns_1 = drop_columns()
+
+    # load joblib files for model and min/max values
+    linear_model = load('output_tuned/joblib/linear_regression_tuned_model.joblib')
+    random_forest_model = load('output_tuned/joblib/random_forest_tuned_model.joblib')
+    gradient_boost_model = load('output_tuned/joblib/gradient_boost_tuned_model.joblib')
+    min_values = load('output_tuned/joblib/min_values.joblib')
+    max_values = load('output_tuned/joblib/max_values.joblib')
+
+
+    # run the current season test
+    print("Tuned - Current Season Test")
+    results_df_current = points_current_test(drop_columns_1, linear_model, random_forest_model, gradient_boost_model, min_values, max_values)
+    print('*******************************************************************************************************')
+
+    print("Tuned - Current Season Test Extrapolated")
+    results_df_extrapolated = points_current_test(drop_columns_1, linear_model, random_forest_model, gradient_boost_model, min_values, max_values, extrapolate=True)
+    print('*******************************************************************************************************')
+
+    # export the results to an excel file
+    results_df_current.to_excel("output_tuned/results_current_tuned.xlsx")
+    results_df_extrapolated.to_excel("output_tuned/results_extrapolated_tuned.xlsx")
 
 if __name__ == "__main__":
-    run_tests()
+    run_tests_default_models()
+    run_tests_tuned_models()
 
 
 

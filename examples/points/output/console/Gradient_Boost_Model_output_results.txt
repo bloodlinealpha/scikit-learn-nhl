@@ -1,0 +1,24 @@
+Gradient_Boost_Model
+Mean Absolute Error (MAE): 9.19468997264392
+Mean Squared Error (MSE): 145.39971506521144
+Root Mean Squared Error (RMSE): 12.05818042099269
+R2 Score: 0.7601643439216412
+
+Feature Importances: 
+                  importance
+shots               0.650263
+shootingPct         0.195604
+timeOnIcePerGame    0.082723
+gamesPlayed         0.019611
+plusMinus           0.017548
+shPoints            0.009370
+shGoals             0.007124
+positionCode_R      0.005200
+gameWinningGoals    0.005049
+otGoals             0.003969
+positionCode_C      0.002616
+positionCode_L      0.000682
+positionCode_D      0.000241
+
+Output Date and Time
+2024-01-14 13:11:34.696376

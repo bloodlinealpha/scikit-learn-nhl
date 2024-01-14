@@ -1,0 +1,24 @@
+Linear_Regression_Model_Tuned
+Mean Absolute Error (MAE): 7.618723151123768
+Mean Squared Error (MSE): 103.32412398137112
+Root Mean Squared Error (RMSE): 10.164847464737043
+R2 Score: 0.829567691706413
+
+Feature Importances: 
+                  importance
+shots              54.210267
+timeOnIcePerGame   41.289004
+shootingPct        28.275550
+plusMinus          26.361332
+shPoints           24.402144
+gamesPlayed        20.244326
+gameWinningGoals   12.838357
+otGoals             0.626290
+shGoals           -23.319256
+positionCode_C    -37.650387
+positionCode_L    -38.150482
+positionCode_R    -39.734618
+positionCode_D    -47.560066
+
+Output Date and Time
+2024-01-14 13:57:44.526838

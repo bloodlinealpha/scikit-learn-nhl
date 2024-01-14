@@ -1,0 +1,24 @@
+Random_Forest_Model_Tuned
+Mean Absolute Error (MAE): 7.730107584321131
+Mean Squared Error (MSE): 118.6069893197895
+Root Mean Squared Error (RMSE): 10.890683602042138
+R2 Score: 0.8043587287208056
+
+Feature Importances: 
+                  importance
+shots               0.280492
+gamesPlayed         0.165397
+timeOnIcePerGame    0.152214
+gameWinningGoals    0.136259
+shootingPct         0.108347
+plusMinus           0.086976
+otGoals             0.021069
+shPoints            0.016883
+positionCode_D      0.009884
+shGoals             0.007910
+positionCode_C      0.006685
+positionCode_R      0.004577
+positionCode_L      0.003306
+
+Output Date and Time
+2024-01-14 13:57:44.569840

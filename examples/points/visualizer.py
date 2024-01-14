@@ -33,9 +33,11 @@ server = app.server
 
 # load the results.csv
 df = pd.read_excel("output/results_current.xlsx")
+df_t = pd.read_excel("output_tuned/results_current_tuned.xlsx")
 
 # load the results_extrapolated.csv
 df2 = pd.read_excel("output/results_extrapolated.xlsx")
+df2_t = pd.read_excel("output_tuned/results_extrapolated_tuned.xlsx")
 
 # load the player_stats.xlsx
 df_table = pd.read_excel("output/player_stats.xlsx")
@@ -76,32 +78,25 @@ style_cell_conditional=[
 app.layout = html.Div([
     html.Div('NHL Top 100 Players (2023/2024) Points Prediction', style={'fontSize': '1.5rem','fontWeight': 'bold', 'textAlign': 'center', 'marginBottom': '1rem'}),
     html.Div([
-        html.Div('Notes: "Actual" is the total points for the current season (as of Jan 6, 2024).\
-                 "Predicted Points" uses the various models (Regression, Random Forest, Gradient Boost) to predict and match player points to the "Actual".\
-                  The Extrapolated values estimate each players season totals assuming an 82 game season. This is done using the Actual, as well as the 3 models. \
-                  Click on the lines to see the Points for each model.\
-                  Click on the legend to hide/show the lines. Full source code in the footer.', style={'fontSize': '0.85rem', 'fontStyle': 'italic' ,'textAlign': 'left', 'padding': '1rem'}),
+        dcc.Graph(id='player-graph')
+    ], style={'width': '100%'}),
+    html.Div([
         html.Button('Reset Legend', id='reset-button', style={
                                                                 'height': '2rem',
                                                                 'backgroundColor': '#007BFF',  # Blue color
                                                                 'color': 'white', 
                                                                 'border': 'none', 
                                                                 'borderRadius': '5px', 
-                                                                'padding': '0.5rem', 
-                                                                'marginRight': '1rem', 
-                                                                'marginTop': '1rem', 
-                                                                'marginBottom': '1rem', 
+                                                                'padding': '0.5rem',  
                                                                 'transition': 'backgroundColor 0.3s ease',  # Smooth color transition
                                                                 'cursor': 'pointer',  # Change cursor on hover
                                                                 'outline': 'none',  # Remove outline
                                                                 'boxShadow': '0px 8px 15px rgba(0, 0, 0, 0.1)'  # Add shadow
                                                             }),
-    ], style={'textAlign': 'right', 'marginTop': '1rem', 'marginRight': '2rem',}),
+    ], style={'display': 'flex', 'flexDirection': 'row', 'alignItems': 'center', 'justifyContent': 'flex-end', 'width': '80%'}),
     html.Div([
-        dcc.Graph(id='player-graph')
-    ], style={'width': '100%'}),
-    html.Div([
-        html.Div('Select a player', style={'fontSize': '1rem','marginRight': '1rem', 'fontWeight': 'bold'}),
+        html.Div([
+                    html.Div('Select a player', style={'fontSize': '1rem','marginRight': '1rem', 'fontWeight': 'bold'}),
         html.Div(
             dcc.Dropdown(
                 id='player-dropdown',
@@ -109,8 +104,24 @@ app.layout = html.Div([
                 value=df['Player Name'].unique()[0],
                 placeholder="Select a player",
                 ),
-                style={'width': '50%', 'height': '2rem', 'marginRight': '1rem'}
+                className='select-player-dropdown'
+            )
+        ], className='select-player-cont'),
+        
+        html.Div([
+            html.Div('Model', style={'fontSize': '1rem','marginRight': '1rem', 'fontWeight': 'bold'}),
+        html.Div(
+            dcc.Dropdown(
+                id='model-dropdown',
+                options=[{'label': 'Default', 'value': 'Default'}, {'label': 'Tuned', 'value': 'Tuned'}],
+                value='Default',
+                placeholder="Select a model",
+                ),
+                className='select-model-dropdown'
             ),
+    ], className='select-model-cont'),
+        
+        
     ], className='select-cont'),
     html.Div([
         html.Div('Player Stats (as of Jan 6, 2023)', style={'fontSize': '1.25rem', 'textAlign': 'center', 'marginBottom': '1rem'}),
@@ -130,7 +141,21 @@ app.layout = html.Div([
             id='player-table_extrapolated',
             style_cell={'whiteSpace': 'normal', 'height': 'auto'},
             style_cell_conditional= style_cell_conditional
-        )
+        ),
+        html.Div([
+            html.Div('Notes:', style={'fontSize': '1.25rem','marginRight': '1rem', 'fontWeight': 'bold'}),
+            html.Ul([
+                html.Li('"Actual" is the total points for the current season (as of Jan 6, 2024).'),
+                html.Li('"Predicted Points" uses the various models (Regression, Random Forest, Gradient Boost) to predict and match player points to the "Actual"'),
+                html.Li('The Extrapolated values estimate each players season totals assuming an 82 game season. This is done using the Actual, as well as the 3 models.'),
+                html.Li('Click on the legend to hide/show the lines.'),
+                html.Li('Click on the lines to see the Points for each model.'),
+                html.Li('The "Select a player" dropdown allows you to select a player to view their points prediction.'),
+                html.Li('The "Model" dropdown allows you to switch between the default and tuned models.'),
+                html.Li('The "Reset Legend" button resets the legend to show all lines.'),
+                html.Li('Full source code in the footer below.'),
+            ], style={'fontSize': '0.85rem', 'textAlign': 'left', 'padding': '1rem'}),
+        ], style={'fontSize': '0.85rem', 'fontStyle': 'italic' ,'textAlign': 'left', 'padding': '1rem'}),
     ], style={'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'justifyContent': 'space-evenly', 'marginTop': '1rem', 'marginBottom': '1rem'}),
     html.Footer([
         html.Div('Created by: BloodLineAlpha Development', style={'fontSize': '0.75rem', 'textAlign': 'center', 'marginTop': '1rem', 'marginBottom': '1rem'}),
@@ -157,18 +182,25 @@ app.layout = html.Div([
 
 @app.callback(
     Output('player-graph', 'figure'),
-    [Input('player-dropdown', 'value'),
-    Input('reset-button', 'n_clicks')],
+    [
+        Input('player-dropdown', 'value'),
+        Input('reset-button', 'n_clicks'), 
+        Input('model-dropdown', 'value')
+    ],
 )
-def update_graph(selected_dropdown_value, n_clicks):
+def update_graph(selected_dropdown_value, n_clicks, model_dropdown_value):
     if n_clicks is None:
-        return create_fig_for_player(selected_dropdown_value)
+        return create_fig_for_player(selected_dropdown_value, model_dropdown_value)
     else:
-        return create_fig_for_player(selected_dropdown_value)
+        return create_fig_for_player(selected_dropdown_value, model_dropdown_value)
 
-def create_fig_for_player(selected_dropdown_value):
-    dff = df[df['Player Name'] == selected_dropdown_value]
-    dff2 = df2[df2['Player Name'] == selected_dropdown_value]
+def create_fig_for_player(selected_dropdown_value, model_dropdown_value):
+    if model_dropdown_value == 'Default':
+        dff = df[df['Player Name'] == selected_dropdown_value]
+        dff2 = df2[df2['Player Name'] == selected_dropdown_value]
+    else:
+        dff = df_t[df_t['Player Name'] == selected_dropdown_value]
+        dff2 = df2_t[df2_t['Player Name'] == selected_dropdown_value]
 
     fig = go.Figure()
 
@@ -431,9 +463,13 @@ def create_fig_for_player(selected_dropdown_value):
 @app.callback(
     Output('player-table', 'columns'),
     Output('player-table', 'data'),
-    Input('player-dropdown', 'value')
+    [
+        Input('player-dropdown', 'value'),
+        Input('model-dropdown', 'value')
+    ]
+    
 )
-def create_table_for_player(selected_dropdown_value):
+def create_table_for_player(selected_dropdown_value, model_dropdown_value):
     # create a dataframe with the player stats
     dff = df_table[df_table['skaterFullName'] == selected_dropdown_value]
     columns = [{"name": i, "id": i} for i in dff.columns]
@@ -444,19 +480,33 @@ def create_table_for_player(selected_dropdown_value):
     columns.append({"name": "Predicted Points (RF)", "id": "Predicted Points (RF)"})
     columns.append({"name": "Predicted Points (GB)", "id": "Predicted Points (GB)"})
     columns.append({"name": "Actual (Jan 6, 2023)", "id": "Actual"})
-    data[0]["Predicted Points (LR)"] = round(df[df['Player Name'] == selected_dropdown_value]['Predicted Points (LR)'].values[0], 0)
-    data[0]["Predicted Points (RF)"] = round(df[df['Player Name'] == selected_dropdown_value]['Predicted Points (RF)'].values[0], 0)
-    data[0]["Predicted Points (GB)"] = round(df[df['Player Name'] == selected_dropdown_value]['Predicted Points (GB)'].values[0], 0)
-    data[0]["Actual"] = round(df[df['Player Name'] == selected_dropdown_value]['Actual Points'].values[0], 0)
+
+    def update_data(dataframe, player_name):
+        data = {}
+        data["skaterFullName"] = player_name
+        data["Predicted Points (LR)"] = round(dataframe[dataframe['Player Name'] == player_name]['Predicted Points (LR)'].values[0], 0)
+        data["Predicted Points (RF)"] = round(dataframe[dataframe['Player Name'] == player_name]['Predicted Points (RF)'].values[0], 0)
+        data["Predicted Points (GB)"] = round(dataframe[dataframe['Player Name'] == player_name]['Predicted Points (GB)'].values[0], 0)
+        data["Actual"] = round(dataframe[dataframe['Player Name'] == player_name]['Actual Points'].values[0], 0)
+        
+        return data
+
+    if model_dropdown_value == 'Default':
+        data[0] = update_data(df, selected_dropdown_value)
+    else:
+        data[0] = update_data(df_t, selected_dropdown_value)
     
     return columns, data
 
 @app.callback(
     Output('player-table_extrapolated', 'columns'),
-    [Output('player-table_extrapolated', 'data'),
-    Input('player-dropdown', 'value')]
+    Output('player-table_extrapolated', 'data'),
+    [
+        Input('player-dropdown', 'value'),
+        Input('model-dropdown', 'value')
+    ]
 )
-def create_table_for_player_extrapolated(selected_dropdown_value):
+def create_table_for_player_extrapolated(selected_dropdown_value, model_dropdown_value):
     # create a dataframe with the player stats
     dff = df2_table[df2_table['skaterFullName'] == selected_dropdown_value]
     columns=[{"name": i, "id": i} for i in dff.columns]
@@ -467,10 +517,20 @@ def create_table_for_player_extrapolated(selected_dropdown_value):
     columns.append({"name": "Predicted Points (RF)", "id": "Predicted Points (RF)"})
     columns.append({"name": "Predicted Points (GB)", "id": "Predicted Points (GB)"})
     columns.append({"name": "Actual (est.)", "id": "Actual"})
-    data[0]["Predicted Points (LR)"] = round(df2[df2['Player Name'] == selected_dropdown_value]['Predicted Points (LR)'].values[0], 0)
-    data[0]["Predicted Points (RF)"] = round(df2[df2['Player Name'] == selected_dropdown_value]['Predicted Points (RF)'].values[0], 0)
-    data[0]["Predicted Points (GB)"] = round(df2[df2['Player Name'] == selected_dropdown_value]['Predicted Points (GB)'].values[0], 0)
-    data[0]["Actual"] = round(df2[df2['Player Name'] == selected_dropdown_value]['Actual Points'].values[0], 0)
+
+    def update_data(dataframe, player_name):
+        data = {}
+        data["skaterFullName"] = player_name
+        data["Predicted Points (LR)"] = round(dataframe[dataframe['Player Name'] == player_name]['Predicted Points (LR)'].values[0], 0)
+        data["Predicted Points (RF)"] = round(dataframe[dataframe['Player Name'] == player_name]['Predicted Points (RF)'].values[0], 0)
+        data["Predicted Points (GB)"] = round(dataframe[dataframe['Player Name'] == player_name]['Predicted Points (GB)'].values[0], 0)
+        data["Actual"] = round(dataframe[dataframe['Player Name'] == player_name]['Actual Points'].values[0], 0)
+        return data
+    
+    if model_dropdown_value == 'Default':
+        data[0] = update_data(df2, selected_dropdown_value)
+    else:
+        data[0] = update_data(df2_t, selected_dropdown_value)
 
     return columns, data
 
