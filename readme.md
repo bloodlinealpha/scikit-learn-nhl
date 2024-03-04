@@ -15,6 +15,8 @@ This [**Syntax Sunday**](https://www.linkedin.com/pulse/syntax-sunday-gpt-action
 ## Examples
 - [Points Regression - Top 100 NHL Players 2023/24 Season](examples/points/readme.md)
   - This example focuses on analyzing and visualizing the top 100 players of the 2023/24 NHL season based on their points (as of Jan 6, 2023). Learn about data processing, visualization, and basic statistical analysis with Scikit-Learn.
+- [Game Classification - Game Win/Loss for 2023/24 Season](examples/teams/readme.md)
+- In this example, we will analyze historical NHL game data and build machine learning models (Classification) to predict the outcome of games for the 2023/24 season. The models will classify each game as either a win or a loss based on various features.
 
 ## Data Source
 The NHL statistics data used in these examples are sourced from [Official NHL Statistics](https://www.nhl.com/stats/). You can access and download the data to follow along with the examples.

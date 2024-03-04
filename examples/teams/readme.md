@@ -4,7 +4,7 @@ This project aims to classify NHL games as either a win or a loss by team, for t
 
 
 ## Introduction
-In this project, we will analyze historical NHL game data and build a machine learning model (Classification) to predict the outcome of games in the upcoming 2023/24 season. The model will classify each game as either a win or a loss based on various features.
+In this project, we will analyze historical NHL game data and build machine learning models (Classification) to predict the outcome of games for the 2023/24 season. The models will classify each game as either a win or a loss based on various features.
 
 - Data is obtained using the NHL API
 
