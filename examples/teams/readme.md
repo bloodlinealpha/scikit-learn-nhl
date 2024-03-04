@@ -34,9 +34,9 @@ In this project, we will analyze historical NHL game data and build machine lear
 ## Steps Taken
 
 1. **Created and Ran [init.py](init.py) which:**
-    - Creates the CSV: [NHL_teams_historical_stats_20132014_to_20222023.csv](csv\NHL_teams_historical_stats_20132014_to_20222023.csv) - used for creating and training the model.
-    - Creates the CSV: [NHL_teams_historical_stats_20232024.csv](csv\NHL_teams_historical_stats_20232024.csv) - used for testing the model and prediction.
-    - Creates the CSV: [NHL_teams_schedule_20232024_2024-02-26.csv](csv\NHL_teams_schedule_20232024_2024-02-26.csv) - used for prediction.
+    - Creates the CSV: [NHL_teams_historical_stats_20132014_to_20222023.csv](csv/NHL_teams_historical_stats_20132014_to_20222023.csv) - used for creating and training the model.
+    - Creates the CSV: [NHL_teams_historical_stats_20232024.csv](csv/NHL_teams_historical_stats_20232024.csv) - used for testing the model and prediction.
+    - Creates the CSV: [NHL_teams_schedule_20232024_2024-02-26.csv](csv/NHL_teams_schedule_20232024_2024-02-26.csv) - used for prediction.
 
 2. **Created and ran [model.py](model.py), which creates three Classification models:**
     - Random Forest (RFC)
@@ -50,7 +50,7 @@ In this project, we will analyze historical NHL game data and build machine lear
     - Created a new feature column for days since last game for each team.
     - Created a new feature column for the current win streak for each team.
     - Created a new feature column for the games played for each team.
-    - Saved the cleaned data to a csv: [NHL_teams_historical_stats_20132014_to_20222023.csv_cleaned.csv](csv\NHL_teams_historical_stats_20132014_to_20222023.csv_cleaned.csv)
+    - Saved the cleaned data to a csv: [NHL_teams_historical_stats_20132014_to_20222023.csv_cleaned.csv](csv/NHL_teams_historical_stats_20132014_to_20222023.csv_cleaned.csv)
     - One-hot encoded `'homeRoad', 'opponentTeamAbbrev', 'teamFullName'`
     - Fill in missing or N/A values with 0.
     - Split the data into train and test sets.
@@ -63,12 +63,12 @@ In this project, we will analyze historical NHL game data and build machine lear
         - current season completed games (up to: feb 26, 2024).
         - remaining games for the current season (feb 27 - Apr 18).
     
-5. **Results are output to [csv\test](csv\test)**
-    - [csv\test\current_season_predictions.csv](csv\test\current_season_predictions.csv)
+5. **Results are output to [csv/test](csv/test)**
+    - [csv/test/current_season_predictions.csv](csv/test/current_season_predictions.csv)
         - current season completed game results.
         - this is unseen data for each model.
         - accuracy is very similiar to the training accuracy.
-    - [csv\test\2023_2024_02-26_predictions.csv](csv\test\2023_2024_02-26_predictions.csv)
+    - [csv/test/2023_2024_02-26_predictions.csv](csv/test/2023_2024_02-26_predictions.csv)
         - predicts game results for each remaining game left in the season
         - feature values are calcualted using averages where necessary
 
