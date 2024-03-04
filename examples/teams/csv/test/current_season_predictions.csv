@@ -1,0 +1,781 @@
+gameDate,teamId,teamFullName,opponentTeamId,opponentTeamAbbrev,homeRoad,rfcPrediction,svmPrediction,mlpPrediction
+2024-02-26,15,Washington Capitals,9,OTT,H,loss,loss,win
+2024-02-26,6,Boston Bruins,55,SEA,R,win,loss,win
+2024-02-26,55,Seattle Kraken,6,BOS,H,loss,loss,loss
+2024-02-26,25,Dallas Stars,2,NYI,H,loss,win,win
+2024-02-26,22,Edmonton Oilers,26,LAK,H,win,win,win
+2024-02-26,9,Ottawa Senators,15,WSH,R,loss,loss,loss
+2024-02-26,26,Los Angeles Kings,22,EDM,R,win,win,win
+2024-02-26,2,New York Islanders,25,DAL,R,win,loss,win
+2024-02-27,5,Pittsburgh Penguins,23,VAN,R,win,loss,win
+2024-02-27,20,Calgary Flames,26,LAK,H,loss,win,win
+2024-02-27,19,St. Louis Blues,52,WPG,R,loss,loss,win
+2024-02-27,18,Nashville Predators,9,OTT,H,loss,win,win
+2024-02-27,17,Detroit Red Wings,15,WSH,H,loss,loss,win
+2024-02-27,1,New Jersey Devils,28,SJS,R,win,loss,win
+2024-02-27,14,Tampa Bay Lightning,4,PHI,R,win,loss,win
+2024-02-27,13,Florida Panthers,7,BUF,H,win,win,win
+2024-02-27,12,Carolina Hurricanes,30,MIN,R,win,win,loss
+2024-02-27,10,Toronto Maple Leafs,54,VGK,H,loss,win,loss
+2024-02-27,9,Ottawa Senators,18,NSH,R,loss,loss,loss
+2024-02-27,8,Montréal Canadiens,53,ARI,H,loss,loss,win
+2024-02-27,7,Buffalo Sabres,13,FLA,R,loss,loss,loss
+2024-02-27,15,Washington Capitals,17,DET,R,loss,loss,win
+2024-02-27,23,Vancouver Canucks,5,PIT,H,loss,loss,loss
+2024-02-27,21,Colorado Avalanche,25,DAL,H,win,win,win
+2024-02-27,4,Philadelphia Flyers,14,TBL,H,loss,win,loss
+2024-02-27,53,Arizona Coyotes,8,MTL,R,loss,loss,loss
+2024-02-27,30,Minnesota Wild,12,CAR,H,loss,win,win
+2024-02-27,54,Vegas Golden Knights,10,TOR,R,loss,loss,win
+2024-02-27,28,San Jose Sharks,1,NJD,H,loss,loss,win
+2024-02-27,52,Winnipeg Jets,19,STL,H,loss,loss,loss
+2024-02-27,25,Dallas Stars,21,COL,R,loss,loss,loss
+2024-02-27,26,Los Angeles Kings,20,CGY,R,win,win,loss
+2024-02-28,19,St. Louis Blues,22,EDM,R,loss,loss,win
+2024-02-28,29,Columbus Blue Jackets,3,NYR,R,loss,loss,loss
+2024-02-28,3,New York Rangers,29,CBJ,H,win,win,win
+2024-02-28,22,Edmonton Oilers,19,STL,H,loss,win,win
+2024-02-29,6,Boston Bruins,54,VGK,H,win,win,win
+2024-02-29,55,Seattle Kraken,5,PIT,H,loss,loss,loss
+2024-02-29,52,Winnipeg Jets,25,DAL,R,loss,loss,loss
+2024-02-29,7,Buffalo Sabres,14,TBL,R,loss,loss,loss
+2024-02-29,5,Pittsburgh Penguins,55,SEA,R,win,loss,win
+2024-02-29,8,Montréal Canadiens,13,FLA,R,loss,loss,loss
+2024-02-29,53,Arizona Coyotes,10,TOR,R,loss,loss,loss
+2024-02-29,54,Vegas Golden Knights,6,BOS,R,loss,loss,loss
+2024-02-29,24,Anaheim Ducks,28,SJS,R,loss,loss,win
+2024-02-29,12,Carolina Hurricanes,29,CBJ,R,win,win,win
+2024-02-29,30,Minnesota Wild,18,NSH,R,loss,loss,loss
+2024-02-29,23,Vancouver Canucks,26,LAK,H,loss,win,win
+2024-02-29,14,Tampa Bay Lightning,7,BUF,H,win,win,win
+2024-02-29,29,Columbus Blue Jackets,12,CAR,H,loss,loss,win
+2024-02-29,16,Chicago Blackhawks,21,COL,H,loss,loss,win
+2024-02-29,28,San Jose Sharks,24,ANA,H,loss,loss,win
+2024-02-29,17,Detroit Red Wings,2,NYI,H,win,win,win
+2024-02-29,26,Los Angeles Kings,23,VAN,R,win,win,win
+2024-02-29,25,Dallas Stars,52,WPG,H,loss,win,win
+2024-02-29,21,Colorado Avalanche,16,CHI,R,win,win,win
+2024-02-29,10,Toronto Maple Leafs,53,ARI,H,win,win,win
+2024-02-29,13,Florida Panthers,8,MTL,H,win,win,win
+2024-02-29,18,Nashville Predators,30,MIN,H,loss,win,win
+2024-02-29,2,New York Islanders,17,DET,R,win,loss,win
+2024-03-01,15,Washington Capitals,4,PHI,H,loss,win,win
+2024-03-01,53,Arizona Coyotes,9,OTT,R,loss,loss,loss
+2024-03-01,24,Anaheim Ducks,1,NJD,H,loss,loss,win
+2024-03-01,9,Ottawa Senators,53,ARI,H,loss,win,win
+2024-03-01,4,Philadelphia Flyers,15,WSH,R,loss,loss,loss
+2024-03-01,1,New Jersey Devils,24,ANA,R,win,loss,loss
+2024-03-02,54,Vegas Golden Knights,7,BUF,R,win,loss,win
+2024-03-02,14,Tampa Bay Lightning,8,MTL,H,win,win,win
+2024-03-02,6,Boston Bruins,2,NYI,R,win,loss,win
+2024-03-02,9,Ottawa Senators,4,PHI,R,loss,loss,win
+2024-03-02,5,Pittsburgh Penguins,20,CGY,R,win,loss,win
+2024-03-02,29,Columbus Blue Jackets,16,CHI,R,loss,loss,win
+2024-03-02,21,Colorado Avalanche,18,NSH,R,win,win,loss
+2024-03-02,16,Chicago Blackhawks,29,CBJ,H,loss,loss,win
+2024-03-02,18,Nashville Predators,21,COL,H,win,win,win
+2024-03-02,8,Montréal Canadiens,14,TBL,R,loss,loss,loss
+2024-03-02,3,New York Rangers,10,TOR,R,win,loss,win
+2024-03-02,30,Minnesota Wild,19,STL,R,loss,loss,loss
+2024-03-02,7,Buffalo Sabres,54,VGK,H,loss,loss,loss
+2024-03-02,19,St. Louis Blues,30,MIN,H,loss,win,win
+2024-03-02,52,Winnipeg Jets,12,CAR,R,loss,loss,loss
+2024-03-02,20,Calgary Flames,5,PIT,H,loss,win,win
+2024-03-02,10,Toronto Maple Leafs,3,NYR,H,win,win,win
+2024-03-02,28,San Jose Sharks,25,DAL,R,loss,loss,win
+2024-03-02,22,Edmonton Oilers,55,SEA,R,loss,win,win
+2024-03-02,13,Florida Panthers,17,DET,R,win,win,win
+2024-03-02,17,Detroit Red Wings,13,FLA,H,win,win,win
+2024-03-02,25,Dallas Stars,28,SJS,H,win,win,win
+2024-03-02,55,Seattle Kraken,22,EDM,H,loss,loss,win
+2024-03-02,2,New York Islanders,6,BOS,H,win,loss,win
+2024-03-02,12,Carolina Hurricanes,52,WPG,H,win,win,win
+2024-03-02,4,Philadelphia Flyers,9,OTT,H,loss,win,win
+2024-03-03,30,Minnesota Wild,28,SJS,H,loss,win,win
+2024-03-03,15,Washington Capitals,53,ARI,H,loss,win,win
+2024-03-03,5,Pittsburgh Penguins,22,EDM,R,win,loss,win
+2024-03-03,28,San Jose Sharks,30,MIN,R,loss,loss,loss
+2024-03-03,7,Buffalo Sabres,52,WPG,H,loss,loss,loss
+2024-03-03,1,New Jersey Devils,26,LAK,R,loss,loss,loss
+2024-03-03,24,Anaheim Ducks,23,VAN,H,win,loss,win
+2024-03-03,22,Edmonton Oilers,5,PIT,H,win,win,win
+2024-03-03,26,Los Angeles Kings,1,NJD,H,win,win,win
+2024-03-03,52,Winnipeg Jets,7,BUF,R,loss,loss,win
+2024-03-03,23,Vancouver Canucks,24,ANA,R,loss,loss,loss
+2024-03-03,53,Arizona Coyotes,15,WSH,R,loss,loss,loss
+2024-03-04,21,Colorado Avalanche,16,CHI,H,win,win,win
+2024-03-04,3,New York Rangers,13,FLA,H,win,win,win
+2024-03-04,19,St. Louis Blues,4,PHI,R,loss,loss,win
+2024-03-04,13,Florida Panthers,3,NYR,R,win,win,win
+2024-03-04,6,Boston Bruins,10,TOR,R,win,loss,win
+2024-03-04,16,Chicago Blackhawks,21,COL,R,loss,loss,loss
+2024-03-04,55,Seattle Kraken,20,CGY,R,loss,loss,loss
+2024-03-04,10,Toronto Maple Leafs,6,BOS,H,win,win,win
+2024-03-04,29,Columbus Blue Jackets,54,VGK,H,loss,loss,win
+2024-03-04,20,Calgary Flames,55,SEA,H,loss,win,win
+2024-03-04,54,Vegas Golden Knights,29,CBJ,R,loss,loss,win
+2024-03-04,4,Philadelphia Flyers,19,STL,H,win,win,loss
+2024-03-05,52,Winnipeg Jets,55,SEA,H,loss,loss,win
+2024-03-05,25,Dallas Stars,28,SJS,R,win,win,win
+2024-03-05,2,New York Islanders,19,STL,H,win,loss,loss
+2024-03-05,23,Vancouver Canucks,26,LAK,R,loss,loss,loss
+2024-03-05,8,Montréal Canadiens,18,NSH,R,loss,loss,loss
+2024-03-05,28,San Jose Sharks,25,DAL,H,loss,loss,win
+2024-03-05,13,Florida Panthers,1,NJD,R,win,win,win
+2024-03-05,19,St. Louis Blues,2,NYI,R,loss,loss,win
+2024-03-05,26,Los Angeles Kings,23,VAN,H,win,win,win
+2024-03-05,29,Columbus Blue Jackets,5,PIT,R,loss,loss,loss
+2024-03-05,22,Edmonton Oilers,6,BOS,R,loss,win,loss
+2024-03-05,5,Pittsburgh Penguins,29,CBJ,H,loss,win,win
+2024-03-05,6,Boston Bruins,22,EDM,H,win,loss,win
+2024-03-05,53,Arizona Coyotes,16,CHI,H,loss,loss,win
+2024-03-05,55,Seattle Kraken,52,WPG,R,loss,loss,loss
+2024-03-05,1,New Jersey Devils,13,FLA,H,loss,loss,loss
+2024-03-05,18,Nashville Predators,8,MTL,H,win,win,win
+2024-03-05,16,Chicago Blackhawks,53,ARI,R,loss,loss,win
+2024-03-06,7,Buffalo Sabres,10,TOR,R,loss,loss,loss
+2024-03-06,9,Ottawa Senators,24,ANA,R,loss,win,win
+2024-03-06,24,Anaheim Ducks,9,OTT,H,loss,loss,win
+2024-03-06,17,Detroit Red Wings,21,COL,R,loss,loss,loss
+2024-03-06,21,Colorado Avalanche,17,DET,H,win,win,win
+2024-03-06,10,Toronto Maple Leafs,7,BUF,H,win,win,win
+2024-03-07,8,Montréal Canadiens,12,CAR,R,loss,loss,loss
+2024-03-07,29,Columbus Blue Jackets,22,EDM,H,win,loss,win
+2024-03-07,19,St. Louis Blues,1,NJD,R,loss,loss,win
+2024-03-07,5,Pittsburgh Penguins,15,WSH,H,win,win,win
+2024-03-07,20,Calgary Flames,14,TBL,R,loss,win,loss
+2024-03-07,53,Arizona Coyotes,30,MIN,H,loss,loss,loss
+2024-03-07,22,Edmonton Oilers,29,CBJ,R,loss,win,win
+2024-03-07,28,San Jose Sharks,2,NYI,H,loss,loss,win
+2024-03-07,14,Tampa Bay Lightning,20,CGY,H,win,win,win
+2024-03-07,1,New Jersey Devils,19,STL,H,win,loss,loss
+2024-03-07,2,New York Islanders,28,SJS,R,win,loss,win
+2024-03-07,26,Los Angeles Kings,9,OTT,H,win,win,win
+2024-03-07,54,Vegas Golden Knights,23,VAN,H,win,loss,win
+2024-03-07,10,Toronto Maple Leafs,6,BOS,R,loss,loss,loss
+2024-03-07,4,Philadelphia Flyers,13,FLA,R,loss,win,loss
+2024-03-07,12,Carolina Hurricanes,8,MTL,H,win,win,win
+2024-03-07,13,Florida Panthers,4,PHI,H,win,win,win
+2024-03-07,23,Vancouver Canucks,54,VGK,R,loss,loss,loss
+2024-03-07,9,Ottawa Senators,26,LAK,R,loss,loss,win
+2024-03-07,30,Minnesota Wild,53,ARI,R,loss,win,win
+2024-03-07,6,Boston Bruins,10,TOR,H,win,loss,win
+2024-03-07,18,Nashville Predators,7,BUF,H,win,win,win
+2024-03-07,7,Buffalo Sabres,18,NSH,R,loss,loss,loss
+2024-03-07,15,Washington Capitals,5,PIT,R,loss,loss,loss
+2024-03-08,30,Minnesota Wild,21,COL,R,loss,loss,win
+2024-03-08,55,Seattle Kraken,52,WPG,H,loss,loss,loss
+2024-03-08,25,Dallas Stars,24,ANA,R,loss,win,win
+2024-03-08,52,Winnipeg Jets,55,SEA,R,loss,loss,win
+2024-03-08,17,Detroit Red Wings,53,ARI,R,loss,loss,win
+2024-03-08,53,Arizona Coyotes,17,DET,H,loss,loss,win
+2024-03-08,24,Anaheim Ducks,25,DAL,H,loss,loss,win
+2024-03-08,21,Colorado Avalanche,30,MIN,H,win,win,win
+2024-03-09,10,Toronto Maple Leafs,8,MTL,R,win,win,loss
+2024-03-09,28,San Jose Sharks,9,OTT,H,loss,loss,win
+2024-03-09,18,Nashville Predators,29,CBJ,R,loss,win,win
+2024-03-09,52,Winnipeg Jets,23,VAN,R,loss,loss,win
+2024-03-09,3,New York Rangers,19,STL,H,win,win,win
+2024-03-09,23,Vancouver Canucks,52,WPG,H,loss,win,loss
+2024-03-09,14,Tampa Bay Lightning,4,PHI,H,win,win,win
+2024-03-09,16,Chicago Blackhawks,15,WSH,R,loss,loss,loss
+2024-03-09,12,Carolina Hurricanes,1,NJD,R,win,win,win
+2024-03-09,26,Los Angeles Kings,25,DAL,H,win,win,win
+2024-03-09,4,Philadelphia Flyers,14,TBL,R,loss,loss,loss
+2024-03-09,54,Vegas Golden Knights,17,DET,H,win,loss,win
+2024-03-09,13,Florida Panthers,20,CGY,H,win,win,win
+2024-03-09,25,Dallas Stars,26,LAK,R,loss,win,win
+2024-03-09,17,Detroit Red Wings,54,VGK,R,loss,loss,loss
+2024-03-09,1,New Jersey Devils,12,CAR,H,win,loss,win
+2024-03-09,9,Ottawa Senators,28,SJS,R,loss,loss,win
+2024-03-09,20,Calgary Flames,13,FLA,R,loss,win,win
+2024-03-09,8,Montréal Canadiens,10,TOR,H,loss,loss,win
+2024-03-09,15,Washington Capitals,16,CHI,H,loss,win,win
+2024-03-09,29,Columbus Blue Jackets,18,NSH,H,win,loss,loss
+2024-03-09,19,St. Louis Blues,3,NYR,R,loss,loss,win
+2024-03-09,6,Boston Bruins,5,PIT,H,win,loss,win
+2024-03-09,22,Edmonton Oilers,7,BUF,R,win,win,win
+2024-03-09,5,Pittsburgh Penguins,6,BOS,R,loss,loss,win
+2024-03-09,7,Buffalo Sabres,22,EDM,H,loss,loss,loss
+2024-03-10,18,Nashville Predators,30,MIN,R,loss,loss,win
+2024-03-10,30,Minnesota Wild,18,NSH,H,loss,win,loss
+2024-03-10,5,Pittsburgh Penguins,22,EDM,H,win,win,win
+2024-03-10,12,Carolina Hurricanes,20,CGY,H,win,win,win
+2024-03-10,53,Arizona Coyotes,16,CHI,R,loss,loss,win
+2024-03-10,16,Chicago Blackhawks,53,ARI,H,loss,loss,win
+2024-03-10,2,New York Islanders,24,ANA,R,win,loss,win
+2024-03-10,22,Edmonton Oilers,5,PIT,R,loss,win,loss
+2024-03-10,24,Anaheim Ducks,2,NYI,H,loss,loss,win
+2024-03-10,20,Calgary Flames,12,CAR,R,loss,loss,win
+2024-03-11,52,Winnipeg Jets,15,WSH,H,loss,loss,win
+2024-03-11,3,New York Rangers,1,NJD,H,win,win,win
+2024-03-11,1,New Jersey Devils,3,NYR,R,loss,loss,loss
+2024-03-11,2,New York Islanders,26,LAK,R,win,loss,win
+2024-03-11,19,St. Louis Blues,6,BOS,R,loss,loss,win
+2024-03-11,6,Boston Bruins,19,STL,H,win,loss,win
+2024-03-11,15,Washington Capitals,52,WPG,R,loss,loss,win
+2024-03-11,26,Los Angeles Kings,2,NYI,H,win,win,win
+2024-03-12,8,Montréal Canadiens,29,CBJ,H,loss,loss,win
+2024-03-12,28,San Jose Sharks,4,PHI,R,loss,loss,win
+2024-03-12,55,Seattle Kraken,54,VGK,H,loss,loss,win
+2024-03-12,21,Colorado Avalanche,20,CGY,R,loss,win,win
+2024-03-12,30,Minnesota Wild,53,ARI,H,win,win,win
+2024-03-12,5,Pittsburgh Penguins,9,OTT,R,loss,loss,win
+2024-03-12,4,Philadelphia Flyers,28,SJS,H,loss,win,win
+2024-03-12,16,Chicago Blackhawks,24,ANA,H,loss,loss,win
+2024-03-12,9,Ottawa Senators,5,PIT,H,loss,win,loss
+2024-03-12,7,Buffalo Sabres,17,DET,H,loss,win,win
+2024-03-12,3,New York Rangers,12,CAR,R,win,loss,win
+2024-03-12,13,Florida Panthers,25,DAL,R,win,win,win
+2024-03-12,29,Columbus Blue Jackets,8,MTL,R,loss,loss,win
+2024-03-12,53,Arizona Coyotes,30,MIN,R,loss,loss,loss
+2024-03-12,25,Dallas Stars,13,FLA,H,loss,win,win
+2024-03-12,54,Vegas Golden Knights,55,SEA,R,loss,loss,win
+2024-03-12,20,Calgary Flames,21,COL,H,loss,win,win
+2024-03-12,17,Detroit Red Wings,7,BUF,R,win,loss,win
+2024-03-12,12,Carolina Hurricanes,3,NYR,H,win,win,win
+2024-03-12,24,Anaheim Ducks,16,CHI,R,loss,loss,win
+2024-03-13,22,Edmonton Oilers,15,WSH,H,win,win,win
+2024-03-13,23,Vancouver Canucks,21,COL,H,win,win,win
+2024-03-13,19,St. Louis Blues,26,LAK,H,loss,win,win
+2024-03-13,52,Winnipeg Jets,18,NSH,H,loss,loss,loss
+2024-03-13,21,Colorado Avalanche,23,VAN,R,loss,win,win
+2024-03-13,26,Los Angeles Kings,19,STL,R,win,win,loss
+2024-03-13,18,Nashville Predators,52,WPG,R,loss,win,win
+2024-03-13,15,Washington Capitals,22,EDM,R,loss,loss,win
+2024-03-14,9,Ottawa Senators,29,CBJ,R,loss,loss,loss
+2024-03-14,30,Minnesota Wild,24,ANA,H,loss,win,win
+2024-03-14,53,Arizona Coyotes,17,DET,R,loss,loss,win
+2024-03-14,3,New York Rangers,14,TBL,R,loss,loss,loss
+2024-03-14,4,Philadelphia Flyers,10,TOR,H,win,win,win
+2024-03-14,28,San Jose Sharks,5,PIT,R,loss,loss,loss
+2024-03-14,5,Pittsburgh Penguins,28,SJS,H,loss,win,win
+2024-03-14,8,Montréal Canadiens,6,BOS,H,loss,loss,loss
+2024-03-14,7,Buffalo Sabres,2,NYI,H,loss,loss,loss
+2024-03-14,29,Columbus Blue Jackets,9,OTT,H,win,loss,win
+2024-03-14,55,Seattle Kraken,15,WSH,H,loss,loss,win
+2024-03-14,14,Tampa Bay Lightning,3,NYR,H,win,win,win
+2024-03-14,2,New York Islanders,7,BUF,R,win,loss,win
+2024-03-14,24,Anaheim Ducks,30,MIN,R,loss,loss,loss
+2024-03-14,12,Carolina Hurricanes,13,FLA,H,win,win,win
+2024-03-14,20,Calgary Flames,54,VGK,H,loss,win,loss
+2024-03-14,15,Washington Capitals,55,SEA,R,loss,loss,loss
+2024-03-14,25,Dallas Stars,1,NJD,H,win,win,win
+2024-03-14,54,Vegas Golden Knights,20,CGY,R,loss,loss,win
+2024-03-14,13,Florida Panthers,12,CAR,R,win,win,win
+2024-03-14,10,Toronto Maple Leafs,4,PHI,R,loss,win,win
+2024-03-14,17,Detroit Red Wings,53,ARI,H,win,win,win
+2024-03-14,6,Boston Bruins,8,MTL,R,win,loss,win
+2024-03-14,1,New Jersey Devils,25,DAL,R,loss,loss,loss
+2024-03-15,16,Chicago Blackhawks,26,LAK,H,loss,loss,win
+2024-03-15,26,Los Angeles Kings,16,CHI,R,win,win,win
+2024-03-15,24,Anaheim Ducks,52,WPG,R,loss,loss,loss
+2024-03-15,52,Winnipeg Jets,24,ANA,H,loss,loss,win
+2024-03-16,53,Arizona Coyotes,1,NJD,H,loss,loss,win
+2024-03-16,3,New York Rangers,5,PIT,R,loss,loss,win
+2024-03-16,14,Tampa Bay Lightning,13,FLA,R,win,loss,win
+2024-03-16,5,Pittsburgh Penguins,3,NYR,H,loss,win,win
+2024-03-16,28,San Jose Sharks,29,CBJ,R,loss,loss,loss
+2024-03-16,2,New York Islanders,9,OTT,H,win,loss,win
+2024-03-16,19,St. Louis Blues,30,MIN,H,loss,win,win
+2024-03-16,9,Ottawa Senators,2,NYI,R,loss,loss,win
+2024-03-16,8,Montréal Canadiens,20,CGY,R,loss,loss,loss
+2024-03-16,29,Columbus Blue Jackets,28,SJS,H,win,loss,win
+2024-03-16,22,Edmonton Oilers,21,COL,H,win,win,win
+2024-03-16,18,Nashville Predators,55,SEA,R,win,win,win
+2024-03-16,7,Buffalo Sabres,17,DET,R,loss,loss,loss
+2024-03-16,30,Minnesota Wild,19,STL,R,loss,loss,loss
+2024-03-16,6,Boston Bruins,4,PHI,H,win,loss,win
+2024-03-16,15,Washington Capitals,23,VAN,R,loss,loss,win
+2024-03-16,26,Los Angeles Kings,25,DAL,R,loss,win,win
+2024-03-16,20,Calgary Flames,8,MTL,H,loss,win,win
+2024-03-16,1,New Jersey Devils,53,ARI,R,win,loss,win
+2024-03-16,4,Philadelphia Flyers,6,BOS,R,loss,loss,loss
+2024-03-16,25,Dallas Stars,26,LAK,H,win,win,win
+2024-03-16,13,Florida Panthers,14,TBL,H,win,win,win
+2024-03-16,10,Toronto Maple Leafs,12,CAR,H,win,win,win
+2024-03-16,55,Seattle Kraken,18,NSH,H,loss,loss,loss
+2024-03-16,17,Detroit Red Wings,7,BUF,H,win,win,win
+2024-03-16,12,Carolina Hurricanes,10,TOR,R,win,win,win
+2024-03-16,23,Vancouver Canucks,15,WSH,H,loss,win,loss
+2024-03-16,21,Colorado Avalanche,22,EDM,R,loss,win,win
+2024-03-17,52,Winnipeg Jets,29,CBJ,R,loss,loss,win
+2024-03-17,24,Anaheim Ducks,19,STL,R,loss,loss,loss
+2024-03-17,19,St. Louis Blues,24,ANA,H,loss,loss,win
+2024-03-17,2,New York Islanders,3,NYR,R,win,loss,win
+2024-03-17,1,New Jersey Devils,54,VGK,R,win,loss,loss
+2024-03-17,3,New York Rangers,2,NYI,H,loss,win,win
+2024-03-17,29,Columbus Blue Jackets,52,WPG,H,loss,loss,win
+2024-03-17,28,San Jose Sharks,16,CHI,R,loss,loss,win
+2024-03-17,17,Detroit Red Wings,5,PIT,R,loss,loss,loss
+2024-03-17,16,Chicago Blackhawks,28,SJS,H,loss,loss,win
+2024-03-17,12,Carolina Hurricanes,9,OTT,R,win,win,win
+2024-03-17,9,Ottawa Senators,12,CAR,H,loss,win,win
+2024-03-17,54,Vegas Golden Knights,1,NJD,H,loss,loss,win
+2024-03-17,5,Pittsburgh Penguins,17,DET,H,win,win,win
+2024-03-18,55,Seattle Kraken,7,BUF,H,win,loss,win
+2024-03-18,7,Buffalo Sabres,55,SEA,R,loss,loss,loss
+2024-03-18,20,Calgary Flames,15,WSH,H,loss,win,win
+2024-03-18,15,Washington Capitals,20,CGY,R,loss,loss,loss
+2024-03-19,5,Pittsburgh Penguins,1,NJD,R,loss,loss,win
+2024-03-19,18,Nashville Predators,28,SJS,H,win,win,win
+2024-03-19,17,Detroit Red Wings,29,CBJ,H,win,loss,win
+2024-03-19,16,Chicago Blackhawks,26,LAK,R,loss,loss,loss
+2024-03-19,4,Philadelphia Flyers,10,TOR,H,loss,win,win
+2024-03-19,6,Boston Bruins,9,OTT,H,win,loss,win
+2024-03-19,54,Vegas Golden Knights,14,TBL,H,win,loss,win
+2024-03-19,52,Winnipeg Jets,3,NYR,R,loss,loss,loss
+2024-03-19,22,Edmonton Oilers,8,MTL,H,win,win,win
+2024-03-19,29,Columbus Blue Jackets,17,DET,R,loss,loss,win
+2024-03-19,2,New York Islanders,12,CAR,H,win,loss,win
+2024-03-19,9,Ottawa Senators,6,BOS,R,loss,loss,loss
+2024-03-19,14,Tampa Bay Lightning,54,VGK,R,win,win,win
+2024-03-19,28,San Jose Sharks,18,NSH,R,loss,loss,loss
+2024-03-19,10,Toronto Maple Leafs,4,PHI,R,loss,win,win
+2024-03-19,24,Anaheim Ducks,30,MIN,H,win,loss,win
+2024-03-19,8,Montréal Canadiens,22,EDM,R,loss,loss,loss
+2024-03-19,21,Colorado Avalanche,19,STL,R,win,win,win
+2024-03-19,19,St. Louis Blues,21,COL,H,win,loss,win
+2024-03-19,3,New York Rangers,52,WPG,H,win,win,win
+2024-03-19,1,New Jersey Devils,5,PIT,H,loss,loss,win
+2024-03-19,7,Buffalo Sabres,23,VAN,R,loss,loss,loss
+2024-03-19,12,Carolina Hurricanes,2,NYI,R,win,win,win
+2024-03-19,30,Minnesota Wild,24,ANA,R,loss,loss,win
+2024-03-19,23,Vancouver Canucks,7,BUF,H,win,win,win
+2024-03-19,26,Los Angeles Kings,16,CHI,H,win,win,win
+2024-03-20,25,Dallas Stars,53,ARI,H,win,win,win
+2024-03-20,10,Toronto Maple Leafs,15,WSH,R,loss,loss,loss
+2024-03-20,30,Minnesota Wild,26,LAK,R,loss,loss,win
+2024-03-20,15,Washington Capitals,10,TOR,H,win,loss,win
+2024-03-20,53,Arizona Coyotes,25,DAL,R,loss,loss,loss
+2024-03-20,26,Los Angeles Kings,30,MIN,H,win,win,win
+2024-03-21,17,Detroit Red Wings,2,NYI,H,win,loss,win
+2024-03-21,28,San Jose Sharks,14,TBL,H,loss,loss,loss
+2024-03-21,24,Anaheim Ducks,16,CHI,H,win,loss,win
+2024-03-21,1,New Jersey Devils,52,WPG,H,loss,loss,win
+2024-03-21,52,Winnipeg Jets,1,NJD,R,loss,loss,win
+2024-03-21,23,Vancouver Canucks,8,MTL,H,loss,win,win
+2024-03-21,19,St. Louis Blues,9,OTT,R,loss,loss,win
+2024-03-21,54,Vegas Golden Knights,55,SEA,H,win,loss,win
+2024-03-21,18,Nashville Predators,13,FLA,R,loss,loss,win
+2024-03-21,22,Edmonton Oilers,7,BUF,H,win,win,win
+2024-03-21,55,Seattle Kraken,54,VGK,R,loss,loss,win
+2024-03-21,3,New York Rangers,6,BOS,R,loss,loss,win
+2024-03-21,9,Ottawa Senators,19,STL,H,loss,win,loss
+2024-03-21,4,Philadelphia Flyers,12,CAR,R,loss,loss,loss
+2024-03-21,8,Montréal Canadiens,23,VAN,R,loss,loss,win
+2024-03-21,13,Florida Panthers,18,NSH,H,win,win,win
+2024-03-21,7,Buffalo Sabres,22,EDM,R,loss,loss,loss
+2024-03-21,6,Boston Bruins,3,NYR,H,win,loss,win
+2024-03-21,14,Tampa Bay Lightning,28,SJS,R,win,loss,win
+2024-03-21,12,Carolina Hurricanes,4,PHI,H,win,win,win
+2024-03-21,16,Chicago Blackhawks,24,ANA,R,loss,loss,win
+2024-03-21,2,New York Islanders,17,DET,R,win,loss,win
+2024-03-22,21,Colorado Avalanche,29,CBJ,H,win,win,win
+2024-03-22,29,Columbus Blue Jackets,21,COL,R,loss,loss,win
+2024-03-22,25,Dallas Stars,5,PIT,H,loss,win,win
+2024-03-22,12,Carolina Hurricanes,15,WSH,R,win,win,win
+2024-03-22,5,Pittsburgh Penguins,25,DAL,R,loss,loss,win
+2024-03-22,53,Arizona Coyotes,55,SEA,H,loss,loss,win
+2024-03-22,15,Washington Capitals,12,CAR,H,loss,loss,win
+2024-03-22,55,Seattle Kraken,53,ARI,R,loss,loss,win
+2024-03-23,3,New York Rangers,13,FLA,H,win,win,win
+2024-03-23,28,San Jose Sharks,16,CHI,H,loss,loss,win
+2024-03-23,54,Vegas Golden Knights,29,CBJ,H,win,loss,win
+2024-03-23,1,New Jersey Devils,9,OTT,H,win,loss,win
+2024-03-23,26,Los Angeles Kings,14,TBL,H,win,win,win
+2024-03-23,9,Ottawa Senators,1,NJD,R,loss,loss,win
+2024-03-23,4,Philadelphia Flyers,6,BOS,H,loss,win,loss
+2024-03-23,29,Columbus Blue Jackets,54,VGK,R,loss,loss,loss
+2024-03-23,19,St. Louis Blues,30,MIN,R,loss,loss,win
+2024-03-23,18,Nashville Predators,17,DET,H,win,win,win
+2024-03-23,13,Florida Panthers,3,NYR,R,win,win,win
+2024-03-23,30,Minnesota Wild,19,STL,H,loss,win,win
+2024-03-23,10,Toronto Maple Leafs,22,EDM,H,win,win,win
+2024-03-23,52,Winnipeg Jets,2,NYI,R,loss,loss,win
+2024-03-23,17,Detroit Red Wings,18,NSH,R,loss,loss,loss
+2024-03-23,16,Chicago Blackhawks,28,SJS,R,loss,loss,win
+2024-03-23,14,Tampa Bay Lightning,26,LAK,R,win,loss,win
+2024-03-23,6,Boston Bruins,4,PHI,R,win,loss,win
+2024-03-23,22,Edmonton Oilers,10,TOR,R,loss,win,win
+2024-03-23,2,New York Islanders,52,WPG,H,win,loss,win
+2024-03-23,23,Vancouver Canucks,20,CGY,H,loss,win,loss
+2024-03-23,20,Calgary Flames,23,VAN,R,loss,win,win
+2024-03-24,2,New York Islanders,1,NJD,H,win,loss,win
+2024-03-24,1,New Jersey Devils,2,NYI,R,win,loss,win
+2024-03-24,20,Calgary Flames,7,BUF,H,win,win,win
+2024-03-24,14,Tampa Bay Lightning,24,ANA,R,win,loss,win
+2024-03-24,24,Anaheim Ducks,14,TBL,H,loss,loss,win
+2024-03-24,13,Florida Panthers,4,PHI,R,win,win,win
+2024-03-24,25,Dallas Stars,53,ARI,R,win,win,win
+2024-03-24,12,Carolina Hurricanes,10,TOR,H,win,win,win
+2024-03-24,10,Toronto Maple Leafs,12,CAR,R,loss,loss,loss
+2024-03-24,55,Seattle Kraken,8,MTL,H,win,loss,win
+2024-03-24,9,Ottawa Senators,22,EDM,H,loss,loss,win
+2024-03-24,22,Edmonton Oilers,9,OTT,R,loss,win,win
+2024-03-24,21,Colorado Avalanche,5,PIT,H,win,win,win
+2024-03-24,52,Winnipeg Jets,15,WSH,R,loss,loss,win
+2024-03-24,4,Philadelphia Flyers,13,FLA,H,loss,loss,loss
+2024-03-24,8,Montréal Canadiens,55,SEA,R,loss,loss,loss
+2024-03-24,7,Buffalo Sabres,20,CGY,R,loss,loss,loss
+2024-03-24,15,Washington Capitals,52,WPG,H,loss,loss,win
+2024-03-24,5,Pittsburgh Penguins,21,COL,R,loss,loss,loss
+2024-03-24,53,Arizona Coyotes,25,DAL,H,loss,loss,loss
+2024-03-25,23,Vancouver Canucks,26,LAK,H,loss,win,win
+2024-03-25,26,Los Angeles Kings,23,VAN,R,win,win,win
+2024-03-25,54,Vegas Golden Knights,19,STL,R,loss,loss,win
+2024-03-25,19,St. Louis Blues,54,VGK,H,win,loss,win
+2024-03-26,52,Winnipeg Jets,22,EDM,H,win,win,win
+2024-03-26,20,Calgary Flames,16,CHI,R,win,loss,win
+2024-03-26,3,New York Rangers,4,PHI,H,win,win,win
+2024-03-26,5,Pittsburgh Penguins,12,CAR,H,win,loss,win
+2024-03-26,15,Washington Capitals,17,DET,H,win,loss,win
+2024-03-26,53,Arizona Coyotes,29,CBJ,H,loss,loss,loss
+2024-03-26,22,Edmonton Oilers,52,WPG,R,loss,win,win
+2024-03-26,16,Chicago Blackhawks,20,CGY,H,loss,loss,loss
+2024-03-26,4,Philadelphia Flyers,3,NYR,R,loss,loss,loss
+2024-03-26,55,Seattle Kraken,24,ANA,H,loss,loss,win
+2024-03-26,21,Colorado Avalanche,8,MTL,H,win,win,win
+2024-03-26,13,Florida Panthers,6,BOS,H,win,win,win
+2024-03-26,12,Carolina Hurricanes,5,PIT,R,win,win,win
+2024-03-26,17,Detroit Red Wings,15,WSH,R,loss,loss,loss
+2024-03-26,54,Vegas Golden Knights,18,NSH,R,win,loss,loss
+2024-03-26,8,Montréal Canadiens,21,COL,R,loss,loss,loss
+2024-03-26,28,San Jose Sharks,25,DAL,H,loss,loss,win
+2024-03-26,6,Boston Bruins,13,FLA,R,loss,loss,win
+2024-03-26,10,Toronto Maple Leafs,1,NJD,H,win,win,win
+2024-03-26,1,New Jersey Devils,10,TOR,R,loss,loss,loss
+2024-03-26,25,Dallas Stars,28,SJS,R,win,win,win
+2024-03-26,24,Anaheim Ducks,55,SEA,R,loss,loss,loss
+2024-03-26,29,Columbus Blue Jackets,53,ARI,R,loss,loss,win
+2024-03-26,18,Nashville Predators,54,VGK,H,loss,win,win
+2024-03-27,9,Ottawa Senators,7,BUF,R,loss,loss,win
+2024-03-27,6,Boston Bruins,14,TBL,R,win,loss,win
+2024-03-27,14,Tampa Bay Lightning,6,BOS,H,win,win,win
+2024-03-27,7,Buffalo Sabres,9,OTT,H,loss,loss,loss
+2024-03-28,4,Philadelphia Flyers,8,MTL,R,loss,loss,loss
+2024-03-28,26,Los Angeles Kings,22,EDM,R,win,win,win
+2024-03-28,21,Colorado Avalanche,3,NYR,H,win,win,win
+2024-03-28,54,Vegas Golden Knights,52,WPG,R,loss,loss,loss
+2024-03-28,28,San Jose Sharks,30,MIN,R,loss,loss,loss
+2024-03-28,53,Arizona Coyotes,18,NSH,H,loss,loss,loss
+2024-03-28,8,Montréal Canadiens,4,PHI,H,win,loss,win
+2024-03-28,9,Ottawa Senators,16,CHI,H,loss,loss,win
+2024-03-28,12,Carolina Hurricanes,17,DET,H,win,win,win
+2024-03-28,29,Columbus Blue Jackets,5,PIT,R,loss,loss,loss
+2024-03-28,24,Anaheim Ducks,55,SEA,R,loss,loss,loss
+2024-03-28,5,Pittsburgh Penguins,29,CBJ,H,loss,loss,win
+2024-03-28,52,Winnipeg Jets,54,VGK,H,loss,win,win
+2024-03-28,30,Minnesota Wild,28,SJS,H,win,win,win
+2024-03-28,23,Vancouver Canucks,25,DAL,H,loss,win,win
+2024-03-28,10,Toronto Maple Leafs,15,WSH,H,win,win,win
+2024-03-28,22,Edmonton Oilers,26,LAK,H,win,win,win
+2024-03-28,3,New York Rangers,21,COL,R,loss,loss,win
+2024-03-28,25,Dallas Stars,23,VAN,R,loss,win,win
+2024-03-28,20,Calgary Flames,19,STL,R,loss,loss,loss
+2024-03-28,18,Nashville Predators,53,ARI,R,win,loss,win
+2024-03-28,15,Washington Capitals,10,TOR,R,loss,loss,win
+2024-03-28,17,Detroit Red Wings,12,CAR,R,loss,loss,win
+2024-03-28,2,New York Islanders,13,FLA,R,win,loss,loss
+2024-03-28,16,Chicago Blackhawks,9,OTT,R,loss,loss,loss
+2024-03-28,55,Seattle Kraken,24,ANA,H,loss,loss,win
+2024-03-28,19,St. Louis Blues,20,CGY,H,loss,loss,win
+2024-03-28,13,Florida Panthers,2,NYI,H,win,win,win
+2024-03-29,7,Buffalo Sabres,1,NJD,H,loss,loss,win
+2024-03-29,1,New Jersey Devils,7,BUF,R,win,loss,win
+2024-03-30,19,St. Louis Blues,28,SJS,H,win,loss,win
+2024-03-30,54,Vegas Golden Knights,30,MIN,R,win,loss,win
+2024-03-30,25,Dallas Stars,55,SEA,R,win,win,win
+2024-03-30,26,Los Angeles Kings,20,CGY,R,win,win,loss
+2024-03-30,17,Detroit Red Wings,13,FLA,R,loss,loss,loss
+2024-03-30,8,Montréal Canadiens,12,CAR,H,win,loss,win
+2024-03-30,3,New York Rangers,53,ARI,R,win,loss,win
+2024-03-30,4,Philadelphia Flyers,16,CHI,H,win,loss,win
+2024-03-30,5,Pittsburgh Penguins,29,CBJ,R,loss,loss,win
+2024-03-30,22,Edmonton Oilers,24,ANA,H,win,win,win
+2024-03-30,9,Ottawa Senators,52,WPG,R,loss,loss,loss
+2024-03-30,28,San Jose Sharks,19,STL,R,loss,loss,loss
+2024-03-30,16,Chicago Blackhawks,4,PHI,R,loss,loss,win
+2024-03-30,2,New York Islanders,14,TBL,R,loss,loss,loss
+2024-03-30,13,Florida Panthers,17,DET,H,win,win,win
+2024-03-30,20,Calgary Flames,26,LAK,H,loss,win,win
+2024-03-30,21,Colorado Avalanche,18,NSH,H,win,win,win
+2024-03-30,53,Arizona Coyotes,3,NYR,H,loss,loss,loss
+2024-03-30,6,Boston Bruins,15,WSH,R,win,loss,win
+2024-03-30,24,Anaheim Ducks,22,EDM,R,loss,loss,win
+2024-03-30,30,Minnesota Wild,54,VGK,H,loss,win,win
+2024-03-30,52,Winnipeg Jets,9,OTT,H,win,win,win
+2024-03-30,55,Seattle Kraken,25,DAL,H,loss,loss,win
+2024-03-30,18,Nashville Predators,21,COL,R,loss,loss,win
+2024-03-30,7,Buffalo Sabres,10,TOR,H,loss,loss,loss
+2024-03-30,10,Toronto Maple Leafs,7,BUF,R,win,win,win
+2024-03-30,29,Columbus Blue Jackets,5,PIT,H,loss,loss,win
+2024-03-30,15,Washington Capitals,6,BOS,H,loss,loss,win
+2024-03-30,12,Carolina Hurricanes,8,MTL,R,win,win,win
+2024-03-30,14,Tampa Bay Lightning,2,NYI,H,win,win,win
+2024-03-31,24,Anaheim Ducks,23,VAN,R,loss,loss,win
+2024-03-31,23,Vancouver Canucks,24,ANA,H,loss,win,win
+2024-04-01,14,Tampa Bay Lightning,17,DET,H,win,win,win
+2024-04-01,3,New York Rangers,5,PIT,H,win,loss,win
+2024-04-01,10,Toronto Maple Leafs,13,FLA,H,win,win,win
+2024-04-01,55,Seattle Kraken,28,SJS,R,win,loss,win
+2024-04-01,19,St. Louis Blues,22,EDM,H,win,loss,win
+2024-04-01,5,Pittsburgh Penguins,3,NYR,R,loss,loss,win
+2024-04-01,13,Florida Panthers,10,TOR,R,win,win,win
+2024-04-01,17,Detroit Red Wings,14,TBL,R,loss,loss,loss
+2024-04-01,21,Colorado Avalanche,29,CBJ,R,loss,win,win
+2024-04-01,2,New York Islanders,4,PHI,R,loss,loss,win
+2024-04-01,28,San Jose Sharks,55,SEA,H,loss,loss,loss
+2024-04-01,4,Philadelphia Flyers,2,NYI,H,win,loss,win
+2024-04-01,52,Winnipeg Jets,26,LAK,H,loss,win,win
+2024-04-01,29,Columbus Blue Jackets,21,COL,H,win,loss,win
+2024-04-01,22,Edmonton Oilers,19,STL,R,loss,win,loss
+2024-04-01,26,Los Angeles Kings,52,WPG,R,win,win,loss
+2024-04-02,1,New Jersey Devils,5,PIT,H,win,loss,win
+2024-04-02,15,Washington Capitals,7,BUF,R,loss,loss,win
+2024-04-02,13,Florida Panthers,8,MTL,R,loss,win,win
+2024-04-02,2,New York Islanders,16,CHI,H,win,loss,win
+2024-04-02,7,Buffalo Sabres,15,WSH,H,loss,loss,loss
+2024-04-02,6,Boston Bruins,18,NSH,R,win,loss,win
+2024-04-02,30,Minnesota Wild,9,OTT,H,loss,win,win
+2024-04-02,8,Montréal Canadiens,13,FLA,H,loss,loss,loss
+2024-04-02,54,Vegas Golden Knights,23,VAN,H,loss,loss,win
+2024-04-02,9,Ottawa Senators,30,MIN,R,loss,loss,loss
+2024-04-02,16,Chicago Blackhawks,2,NYI,R,loss,loss,loss
+2024-04-02,5,Pittsburgh Penguins,1,NJD,R,win,loss,win
+2024-04-02,24,Anaheim Ducks,20,CGY,R,loss,loss,loss
+2024-04-02,23,Vancouver Canucks,54,VGK,R,loss,loss,loss
+2024-04-02,20,Calgary Flames,24,ANA,H,loss,win,win
+2024-04-02,18,Nashville Predators,6,BOS,H,win,win,win
+2024-04-03,26,Los Angeles Kings,55,SEA,H,win,win,win
+2024-04-03,25,Dallas Stars,22,EDM,H,win,win,win
+2024-04-03,14,Tampa Bay Lightning,10,TOR,R,win,loss,win
+2024-04-03,3,New York Rangers,1,NJD,H,win,loss,win
+2024-04-03,53,Arizona Coyotes,23,VAN,H,loss,loss,win
+2024-04-03,1,New Jersey Devils,3,NYR,R,win,loss,loss
+2024-04-03,22,Edmonton Oilers,25,DAL,R,loss,win,win
+2024-04-03,23,Vancouver Canucks,53,ARI,R,loss,loss,win
+2024-04-03,10,Toronto Maple Leafs,14,TBL,H,win,win,loss
+2024-04-03,55,Seattle Kraken,26,LAK,R,loss,loss,win
+2024-04-04,5,Pittsburgh Penguins,15,WSH,R,win,loss,win
+2024-04-04,13,Florida Panthers,9,OTT,R,win,win,win
+2024-04-04,15,Washington Capitals,5,PIT,H,win,loss,win
+2024-04-04,14,Tampa Bay Lightning,8,MTL,R,win,loss,win
+2024-04-04,2,New York Islanders,29,CBJ,R,loss,loss,win
+2024-04-04,20,Calgary Flames,52,WPG,R,loss,loss,win
+2024-04-04,9,Ottawa Senators,13,FLA,H,loss,loss,win
+2024-04-04,52,Winnipeg Jets,20,CGY,H,loss,win,win
+2024-04-04,30,Minnesota Wild,21,COL,H,loss,win,win
+2024-04-04,8,Montréal Canadiens,14,TBL,H,loss,loss,loss
+2024-04-04,29,Columbus Blue Jackets,2,NYI,H,loss,loss,win
+2024-04-04,28,San Jose Sharks,26,LAK,H,loss,loss,win
+2024-04-04,26,Los Angeles Kings,28,SJS,R,win,win,win
+2024-04-04,6,Boston Bruins,12,CAR,R,win,loss,win
+2024-04-04,21,Colorado Avalanche,30,MIN,R,win,win,win
+2024-04-04,18,Nashville Predators,19,STL,H,win,win,win
+2024-04-04,19,St. Louis Blues,18,NSH,R,loss,loss,win
+2024-04-04,12,Carolina Hurricanes,6,BOS,H,win,win,win
+2024-04-05,55,Seattle Kraken,24,ANA,R,loss,loss,win
+2024-04-05,22,Edmonton Oilers,21,COL,H,win,win,win
+2024-04-05,21,Colorado Avalanche,22,EDM,R,loss,win,win
+2024-04-05,3,New York Rangers,17,DET,R,win,loss,win
+2024-04-05,7,Buffalo Sabres,4,PHI,H,loss,loss,win
+2024-04-05,24,Anaheim Ducks,55,SEA,H,loss,loss,win
+2024-04-05,17,Detroit Red Wings,3,NYR,H,loss,loss,win
+2024-04-05,54,Vegas Golden Knights,53,ARI,R,win,loss,win
+2024-04-05,53,Arizona Coyotes,54,VGK,H,loss,loss,win
+2024-04-05,4,Philadelphia Flyers,7,BUF,R,win,loss,win
+2024-04-05,12,Carolina Hurricanes,15,WSH,H,win,win,win
+2024-04-05,15,Washington Capitals,12,CAR,R,loss,loss,win
+2024-04-06,18,Nashville Predators,2,NYI,R,loss,loss,win
+2024-04-06,5,Pittsburgh Penguins,14,TBL,H,loss,loss,win
+2024-04-06,16,Chicago Blackhawks,25,DAL,H,loss,loss,win
+2024-04-06,22,Edmonton Oilers,20,CGY,R,loss,win,win
+2024-04-06,29,Columbus Blue Jackets,4,PHI,H,win,loss,win
+2024-04-06,8,Montréal Canadiens,10,TOR,H,win,loss,win
+2024-04-06,13,Florida Panthers,6,BOS,R,win,win,win
+2024-04-06,4,Philadelphia Flyers,29,CBJ,R,loss,loss,loss
+2024-04-06,28,San Jose Sharks,19,STL,H,loss,loss,loss
+2024-04-06,20,Calgary Flames,22,EDM,H,loss,win,win
+2024-04-06,2,New York Islanders,18,NSH,H,win,loss,win
+2024-04-06,52,Winnipeg Jets,30,MIN,R,loss,loss,win
+2024-04-06,30,Minnesota Wild,52,WPG,H,loss,win,loss
+2024-04-06,14,Tampa Bay Lightning,5,PIT,R,win,loss,win
+2024-04-06,23,Vancouver Canucks,26,LAK,R,loss,loss,loss
+2024-04-06,19,St. Louis Blues,28,SJS,R,win,loss,win
+2024-04-06,10,Toronto Maple Leafs,8,MTL,R,win,loss,win
+2024-04-06,1,New Jersey Devils,9,OTT,R,win,loss,loss
+2024-04-06,6,Boston Bruins,13,FLA,H,win,loss,win
+2024-04-06,25,Dallas Stars,16,CHI,R,loss,win,win
+2024-04-06,9,Ottawa Senators,1,NJD,H,loss,loss,win
+2024-04-06,26,Los Angeles Kings,23,VAN,H,win,win,win
+2024-04-07,3,New York Rangers,8,MTL,H,win,loss,win
+2024-04-07,30,Minnesota Wild,16,CHI,R,loss,loss,win
+2024-04-07,21,Colorado Avalanche,25,DAL,H,win,win,win
+2024-04-07,18,Nashville Predators,1,NJD,R,win,loss,win
+2024-04-07,12,Carolina Hurricanes,29,CBJ,H,win,win,win
+2024-04-07,53,Arizona Coyotes,28,SJS,R,loss,loss,loss
+2024-04-07,25,Dallas Stars,21,COL,R,loss,loss,win
+2024-04-07,28,San Jose Sharks,53,ARI,H,loss,loss,win
+2024-04-07,19,St. Louis Blues,24,ANA,R,loss,loss,win
+2024-04-07,29,Columbus Blue Jackets,12,CAR,R,loss,loss,win
+2024-04-07,1,New Jersey Devils,18,NSH,H,win,loss,win
+2024-04-07,9,Ottawa Senators,15,WSH,R,loss,loss,loss
+2024-04-07,17,Detroit Red Wings,7,BUF,H,win,loss,win
+2024-04-07,24,Anaheim Ducks,19,STL,H,win,loss,loss
+2024-04-07,15,Washington Capitals,9,OTT,H,win,loss,win
+2024-04-07,7,Buffalo Sabres,17,DET,R,loss,loss,win
+2024-04-07,16,Chicago Blackhawks,30,MIN,H,loss,loss,loss
+2024-04-07,8,Montréal Canadiens,3,NYR,R,loss,loss,loss
+2024-04-08,5,Pittsburgh Penguins,10,TOR,R,win,loss,win
+2024-04-08,10,Toronto Maple Leafs,5,PIT,H,win,win,win
+2024-04-08,23,Vancouver Canucks,54,VGK,H,loss,win,loss
+2024-04-08,54,Vegas Golden Knights,23,VAN,R,loss,loss,win
+2024-04-09,13,Florida Panthers,9,OTT,H,win,win,win
+2024-04-09,7,Buffalo Sabres,25,DAL,R,loss,loss,loss
+2024-04-09,30,Minnesota Wild,21,COL,R,loss,loss,loss
+2024-04-09,21,Colorado Avalanche,30,MIN,H,win,win,win
+2024-04-09,29,Columbus Blue Jackets,14,TBL,R,loss,loss,loss
+2024-04-09,15,Washington Capitals,17,DET,R,win,loss,win
+2024-04-09,6,Boston Bruins,12,CAR,H,win,loss,win
+2024-04-09,12,Carolina Hurricanes,6,BOS,R,win,win,win
+2024-04-09,24,Anaheim Ducks,26,LAK,H,win,loss,win
+2024-04-09,4,Philadelphia Flyers,8,MTL,R,loss,loss,win
+2024-04-09,52,Winnipeg Jets,18,NSH,R,loss,loss,win
+2024-04-09,1,New Jersey Devils,10,TOR,H,win,loss,win
+2024-04-09,2,New York Islanders,3,NYR,H,win,loss,win
+2024-04-09,25,Dallas Stars,7,BUF,H,win,win,win
+2024-04-09,10,Toronto Maple Leafs,1,NJD,R,loss,loss,win
+2024-04-09,53,Arizona Coyotes,55,SEA,R,loss,loss,win
+2024-04-09,9,Ottawa Senators,13,FLA,R,loss,loss,loss
+2024-04-09,26,Los Angeles Kings,24,ANA,R,win,win,win
+2024-04-09,3,New York Rangers,2,NYI,R,win,loss,win
+2024-04-09,17,Detroit Red Wings,15,WSH,H,loss,loss,win
+2024-04-09,14,Tampa Bay Lightning,29,CBJ,H,win,win,win
+2024-04-09,55,Seattle Kraken,53,ARI,H,win,loss,win
+2024-04-09,20,Calgary Flames,28,SJS,R,win,loss,win
+2024-04-09,8,Montréal Canadiens,4,PHI,H,win,loss,win
+2024-04-09,28,San Jose Sharks,20,CGY,H,loss,loss,loss
+2024-04-09,18,Nashville Predators,52,WPG,H,win,win,win
+2024-04-10,19,St. Louis Blues,16,CHI,H,win,loss,win
+2024-04-10,53,Arizona Coyotes,23,VAN,R,loss,loss,win
+2024-04-10,23,Vancouver Canucks,53,ARI,H,win,win,win
+2024-04-10,54,Vegas Golden Knights,22,EDM,R,loss,loss,win
+2024-04-10,16,Chicago Blackhawks,19,STL,R,loss,loss,loss
+2024-04-10,22,Edmonton Oilers,54,VGK,H,win,win,win
+2024-04-11,15,Washington Capitals,7,BUF,R,loss,loss,win
+2024-04-11,5,Pittsburgh Penguins,17,DET,H,loss,loss,win
+2024-04-11,9,Ottawa Senators,14,TBL,R,loss,loss,loss
+2024-04-11,2,New York Islanders,8,MTL,H,win,loss,win
+2024-04-11,52,Winnipeg Jets,25,DAL,R,loss,loss,win
+2024-04-11,13,Florida Panthers,29,CBJ,H,win,win,win
+2024-04-11,25,Dallas Stars,52,WPG,H,win,win,win
+2024-04-11,10,Toronto Maple Leafs,1,NJD,H,win,win,win
+2024-04-11,29,Columbus Blue Jackets,13,FLA,R,loss,loss,win
+2024-04-11,55,Seattle Kraken,28,SJS,H,win,loss,win
+2024-04-11,17,Detroit Red Wings,5,PIT,R,loss,loss,loss
+2024-04-11,7,Buffalo Sabres,15,WSH,H,loss,loss,win
+2024-04-11,14,Tampa Bay Lightning,9,OTT,H,win,win,win
+2024-04-11,20,Calgary Flames,26,LAK,R,win,loss,win
+2024-04-11,26,Los Angeles Kings,20,CGY,H,win,win,win
+2024-04-11,4,Philadelphia Flyers,3,NYR,R,loss,loss,loss
+2024-04-11,3,New York Rangers,4,PHI,H,win,loss,win
+2024-04-11,8,Montréal Canadiens,2,NYI,R,loss,loss,loss
+2024-04-11,28,San Jose Sharks,55,SEA,R,loss,loss,loss
+2024-04-11,1,New Jersey Devils,10,TOR,R,loss,loss,win
+2024-04-12,16,Chicago Blackhawks,18,NSH,H,loss,loss,loss
+2024-04-12,53,Arizona Coyotes,22,EDM,R,loss,loss,loss
+2024-04-12,24,Anaheim Ducks,20,CGY,H,loss,loss,win
+2024-04-12,54,Vegas Golden Knights,30,MIN,H,loss,loss,win
+2024-04-12,22,Edmonton Oilers,53,ARI,H,win,win,win
+2024-04-12,20,Calgary Flames,24,ANA,R,loss,loss,win
+2024-04-12,12,Carolina Hurricanes,19,STL,R,win,win,win
+2024-04-12,30,Minnesota Wild,54,VGK,R,loss,loss,loss
+2024-04-12,18,Nashville Predators,16,CHI,R,win,loss,win
+2024-04-12,19,St. Louis Blues,12,CAR,H,win,loss,win
+2024-04-13,24,Anaheim Ducks,26,LAK,R,loss,loss,win
+2024-04-13,9,Ottawa Senators,8,MTL,H,loss,loss,win
+2024-04-13,55,Seattle Kraken,25,DAL,R,loss,loss,loss
+2024-04-13,25,Dallas Stars,55,SEA,H,win,win,win
+2024-04-13,22,Edmonton Oilers,23,VAN,H,win,win,win
+2024-04-13,26,Los Angeles Kings,24,ANA,H,win,win,win
+2024-04-13,4,Philadelphia Flyers,1,NJD,H,win,loss,win
+2024-04-13,15,Washington Capitals,14,TBL,H,loss,loss,win
+2024-04-13,14,Tampa Bay Lightning,15,WSH,R,win,loss,win
+2024-04-13,10,Toronto Maple Leafs,17,DET,H,win,win,win
+2024-04-13,23,Vancouver Canucks,22,EDM,R,loss,loss,loss
+2024-04-13,8,Montréal Canadiens,9,OTT,R,loss,loss,loss
+2024-04-13,13,Florida Panthers,7,BUF,H,win,win,win
+2024-04-13,2,New York Islanders,3,NYR,R,win,loss,loss
+2024-04-13,18,Nashville Predators,29,CBJ,H,loss,loss,win
+2024-04-13,28,San Jose Sharks,30,MIN,H,loss,loss,loss
+2024-04-13,5,Pittsburgh Penguins,6,BOS,H,win,loss,win
+2024-04-13,30,Minnesota Wild,28,SJS,R,loss,loss,win
+2024-04-13,6,Boston Bruins,5,PIT,R,win,loss,win
+2024-04-13,21,Colorado Avalanche,52,WPG,H,win,win,win
+2024-04-13,17,Detroit Red Wings,10,TOR,R,loss,loss,win
+2024-04-13,29,Columbus Blue Jackets,18,NSH,R,loss,loss,loss
+2024-04-13,1,New Jersey Devils,4,PHI,R,win,loss,win
+2024-04-13,52,Winnipeg Jets,21,COL,R,loss,loss,win
+2024-04-13,3,New York Rangers,2,NYI,H,loss,loss,win
+2024-04-13,7,Buffalo Sabres,13,FLA,R,loss,loss,loss
+2024-04-14,54,Vegas Golden Knights,21,COL,H,loss,loss,win
+2024-04-14,21,Colorado Avalanche,54,VGK,R,loss,loss,win
+2024-04-14,53,Arizona Coyotes,20,CGY,R,loss,loss,loss
+2024-04-14,12,Carolina Hurricanes,16,CHI,R,win,win,win
+2024-04-14,20,Calgary Flames,53,ARI,H,win,win,win
+2024-04-14,19,St. Louis Blues,55,SEA,H,win,loss,win
+2024-04-14,55,Seattle Kraken,19,STL,R,loss,loss,loss
+2024-04-14,16,Chicago Blackhawks,12,CAR,H,loss,loss,win
+2024-04-15,1,New Jersey Devils,2,NYI,H,win,loss,win
+2024-04-15,22,Edmonton Oilers,28,SJS,H,win,win,win
+2024-04-15,3,New York Rangers,9,OTT,H,win,loss,win
+2024-04-15,15,Washington Capitals,6,BOS,H,win,loss,win
+2024-04-15,14,Tampa Bay Lightning,7,BUF,H,win,win,win
+2024-04-15,2,New York Islanders,1,NJD,R,win,loss,win
+2024-04-15,8,Montréal Canadiens,17,DET,R,win,loss,win
+2024-04-15,18,Nashville Predators,5,PIT,R,loss,loss,win
+2024-04-15,28,San Jose Sharks,22,EDM,R,loss,loss,loss
+2024-04-15,7,Buffalo Sabres,14,TBL,R,loss,loss,loss
+2024-04-15,6,Boston Bruins,15,WSH,R,win,loss,win
+2024-04-15,17,Detroit Red Wings,8,MTL,H,win,loss,win
+2024-04-15,5,Pittsburgh Penguins,18,NSH,H,win,loss,win
+2024-04-15,30,Minnesota Wild,26,LAK,R,loss,loss,loss
+2024-04-15,9,Ottawa Senators,3,NYR,R,loss,loss,loss
+2024-04-15,26,Los Angeles Kings,30,MIN,H,win,win,win
+2024-04-16,54,Vegas Golden Knights,16,CHI,H,win,win,win
+2024-04-16,16,Chicago Blackhawks,54,VGK,R,loss,loss,loss
+2024-04-16,4,Philadelphia Flyers,15,WSH,H,win,loss,win
+2024-04-16,13,Florida Panthers,10,TOR,H,win,win,win
+2024-04-16,23,Vancouver Canucks,20,CGY,H,win,win,win
+2024-04-16,10,Toronto Maple Leafs,13,FLA,R,loss,loss,win
+2024-04-16,9,Ottawa Senators,6,BOS,R,loss,loss,loss
+2024-04-16,12,Carolina Hurricanes,29,CBJ,R,win,win,win
+2024-04-16,8,Montréal Canadiens,17,DET,H,loss,loss,win
+2024-04-16,55,Seattle Kraken,52,WPG,R,loss,loss,loss
+2024-04-16,20,Calgary Flames,23,VAN,R,loss,loss,win
+2024-04-16,29,Columbus Blue Jackets,12,CAR,H,win,loss,win
+2024-04-16,6,Boston Bruins,9,OTT,H,loss,loss,win
+2024-04-16,15,Washington Capitals,4,PHI,R,loss,loss,win
+2024-04-16,52,Winnipeg Jets,55,SEA,H,win,win,win
+2024-04-16,17,Detroit Red Wings,8,MTL,R,loss,loss,win
+2024-04-17,2,New York Islanders,5,PIT,H,loss,loss,win
+2024-04-17,25,Dallas Stars,19,STL,H,win,win,win
+2024-04-17,19,St. Louis Blues,25,DAL,R,loss,loss,win
+2024-04-17,5,Pittsburgh Penguins,2,NYI,R,loss,loss,win
+2024-04-17,53,Arizona Coyotes,22,EDM,H,loss,loss,win
+2024-04-17,10,Toronto Maple Leafs,14,TBL,R,loss,loss,loss
+2024-04-17,22,Edmonton Oilers,53,ARI,R,win,win,win
+2024-04-17,14,Tampa Bay Lightning,10,TOR,H,win,loss,win
+2024-04-18,16,Chicago Blackhawks,26,LAK,R,loss,loss,loss
+2024-04-18,23,Vancouver Canucks,52,WPG,R,loss,loss,loss
+2024-04-18,21,Colorado Avalanche,22,EDM,H,win,win,win
+2024-04-18,22,Edmonton Oilers,21,COL,R,loss,win,win
+2024-04-18,24,Anaheim Ducks,54,VGK,R,loss,loss,loss
+2024-04-18,26,Los Angeles Kings,16,CHI,H,win,win,win
+2024-04-18,28,San Jose Sharks,20,CGY,R,loss,loss,loss
+2024-04-18,54,Vegas Golden Knights,24,ANA,H,win,win,win
+2024-04-18,30,Minnesota Wild,55,SEA,H,win,win,win
+2024-04-18,52,Winnipeg Jets,23,VAN,H,win,win,win
+2024-04-18,20,Calgary Flames,28,SJS,H,win,win,win
+2024-04-18,55,Seattle Kraken,30,MIN,R,loss,loss,win
